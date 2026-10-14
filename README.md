@@ -25,3 +25,15 @@ https://www.francecompetences.fr/recherche/rncp/42140/
 ## Interactions
 
 Recherche, filtres thématiques, fiches modales, liens de programme et contact Pilot’in. Animations CSS, apparitions au défilement, adaptation mobile et réduction des mouvements. Aucune demande n’est envoyée automatiquement.
+
+## SEO et publication o2switch
+
+Le dossier du dépôt doit être la racine web publiée : `index.html`, `.htaccess`, `robots.txt`, `sitemap.xml`, les scripts, le CSS et les images doivent être servis depuis https://formateur-wordpress-lyon.fr/. Le 14 octobre 2026, le domaine répondait avec une liste de répertoire vide : la publication effective reste à vérifier après mise à jour du checkout serveur.
+
+Métadonnées : titre, description, canonical HTTPS, robots, Open Graph, Twitter Card, favicon et image de partage 1200 × 630. JSON-LD : Person, WebSite, WebPage, Organization Pilot’in et ItemList de Course avec Pilot’in comme fournisseur. Aucun avis, tarif ou diplôme personnel inventé. Les formations et liens officiels sont présents dans le HTML sans JavaScript.
+
+Après modification de `pilot-data.js`, régénérer le HTML et le JSON-LD avec `node scripts/build-seo.mjs`. Le sitemap référence seulement la page d’accueil ; les ancres de sections ne sont pas des pages distinctes. Soumettre le sitemap dans Search Console une fois le domaine correctement publié. Aucun jeton de vérification n’est inventé.
+
+### Redirections à venir
+
+Remplir `plan-redirections.csv` avec les anciennes URL et la destination pertinente. Laisser chaque URL inconnue en attente de validation, puis ajouter les redirections 301 au `.htaccess`. Ne pas rediriger toutes les anciennes pages vers l’accueil. Vérifier le statut 301, la destination 200 et l’absence de chaîne ou boucle. Aucune redirection métier n’est activée avant réception des anciennes URL. La seule normalisation déjà configurée concerne `/index.html` vers `/`. Une page 404 réelle est configurée via Apache.

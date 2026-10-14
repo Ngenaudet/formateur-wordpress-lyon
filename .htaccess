@@ -1,0 +1,11 @@
+# Configuration Apache pour o2switch. Aucune redirection d’anciennes pages activée.
+AddDefaultCharset UTF-8
+DirectoryIndex index.html
+Options -Indexes
+ErrorDocument 404 /404.html
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# Normaliser uniquement index.html ; les anciennes URL restent en attente du plan.
+RewriteCond %{THE_REQUEST} \s/+index\.html[?\s] [NC]
+RewriteRule ^index\.html$ https://formateur-wordpress-lyon.fr/ [R=301,L]
+</IfModule>
