@@ -56,6 +56,6 @@ html=html.replace(/<div class="course-grid" id="courses">[\s\S]*?<\/div><p id="r
 html=html.replace(/(<p id="result-count"[^>]*>)[\s\S]*?<\/p>/,'$131 formations Pilot’in</p>');
 html=html.replace('<p id="catalogue-note" class="catalogue-note"></p>','<p id="catalogue-note" class="catalogue-note">Formations proposées par Pilot’in. Consultez les programmes officiels pour les modalités et inscriptions.</p>');
 fs.writeFileSync(path.join(root,'index.html'),html);
-fs.writeFileSync(path.join(root,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${base}</loc></url></urlset>\n`);
+fs.writeFileSync(path.join(root,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${base}</loc></url><url><loc>${base}mentions-legales.html</loc></url><url><loc>${base}confidentialite.html</loc></url></urlset>\n`);
 fs.writeFileSync(path.join(root,'robots.txt'),`User-agent: *\nAllow: /\n\nSitemap: ${base}sitemap.xml\n`);
 console.log(`SEO généré : ${courses.length} formations, métadonnées, JSON-LD, sitemap et robots.txt.`);

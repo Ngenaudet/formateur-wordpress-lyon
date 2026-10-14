@@ -37,3 +37,13 @@ Après modification de `pilot-data.js`, régénérer le HTML et le JSON-LD avec 
 ### Redirections à venir
 
 Remplir `plan-redirections.csv` avec les anciennes URL et la destination pertinente. Laisser chaque URL inconnue en attente de validation, puis ajouter les redirections 301 au `.htaccess`. Ne pas rediriger toutes les anciennes pages vers l’accueil. Vérifier le statut 301, la destination 200 et l’absence de chaîne ou boucle. Aucune redirection métier n’est activée avant réception des anciennes URL. La seule normalisation déjà configurée concerne `/index.html` vers `/`. Une page 404 réelle est configurée via Apache.
+
+## Mentions légales, paiement et Analytics
+
+Coordonnées fournies par Nicolas : Nicolas Genaudet EI, 1 rue de Montribloud, 69009 Lyon ; SIREN 892530064 ; TVA FR70892530064 ; NDA 84692278769 ; téléphone 0681909494 ; email genaudet.nicolas@gmail.com. Deux pages liées depuis le pied de page : mentions légales et confidentialité. Le médiateur reste à désigner ; les durées de conservation des contacts et des journaux restent à préciser, ainsi que les réglages de traitement du compte GA4. Ces rubriques ne sont pas déclarées entièrement finalisées.
+
+Les formations personnelles sont facturées par Nicolas et payables en trois virements, selon le contrat. Aucun nombre de mensualités, partage en tiers égaux ou frais de financement n’a été inventé. Pour un particulier finançant lui-même une formation professionnelle, établir un contrat conforme, notamment sur le délai de rétractation, l’absence de paiement avant son expiration, le premier versement plafonné et l’échelonnement au fur et à mesure du déroulement de la formation. Les conditions Pilot’in restent distinctes.
+
+GA4 G-NWBTJB68HL : mode de consentement basique, chargement uniquement après acceptation, refus équivalent, retrait au pied de page. Préférence conservée six mois, cookies GA configurés pour treize mois sans renouvellement de l’échéance. Publicité et Google Signals désactivés par la configuration locale. Aucun chargement Analytics dans les aperçus locaux. Vérifier aussi les paramètres GA4 (durée de conservation, partage, mesure améliorée et éventuels usages supplémentaires).
+
+Vérification : `node tests/consent.mjs`. Références : https://developers.google.com/tag-platform/security/concepts/consent-mode et https://entreprendre.service-public.gouv.fr/vosdroits/F33338.
