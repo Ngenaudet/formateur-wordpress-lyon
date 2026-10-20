@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Claude Code WordPress : ce que ça change vraiment sur un projet client | Nicolas Genaudet</title><meta name="description" content="Prompts, configuration et retours de terrain pour utiliser Claude Code sur un projet WordPress client."><meta name="author" content="Nicolas Genaudet"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://formateur-wordpress-lyon.fr/claude-code-wordpress.html">
+<meta property="og:type" content="article"><meta property="og:locale" content="fr_FR"><meta property="og:title" content="Claude Code WordPress : ce que ça change vraiment sur un projet client"><meta property="og:description" content="Prompts, configuration et retours de terrain pour utiliser Claude Code sur un projet WordPress client."><meta property="og:url" content="https://formateur-wordpress-lyon.fr/claude-code-wordpress.html"><meta property="og:image" content="https://formateur-wordpress-lyon.fr/social-preview.png"><meta property="og:image:alt" content="Nicolas Genaudet — Formateur WordPress à Lyon"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="blog.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://formateur-wordpress-lyon.fr/#nicolas", "name": "Nicolas Genaudet", "url": "https://nicolas-genaudet.fr/", "jobTitle": "Formateur WordPress, UX/UI et SEO", "address": {"@type": "PostalAddress", "addressLocality": "Lyon", "addressCountry": "FR"}}, {"@type": "Article", "headline": "Claude Code WordPress : ce que ça change vraiment sur un projet client", "description": "Prompts, configuration et retours de terrain pour utiliser Claude Code sur un projet WordPress client.", "datePublished": "2026-10-20", "dateModified": "2026-10-20", "author": {"@id": "https://formateur-wordpress-lyon.fr/#nicolas"}, "publisher": {"@id": "https://formateur-wordpress-lyon.fr/#nicolas"}, "mainEntityOfPage": "https://formateur-wordpress-lyon.fr/claude-code-wordpress.html", "inLanguage": "fr-FR", "articleSection": "Développement"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Claude Code peut-il créer un plugin WordPress complet de A à Z ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui pour le squelette, non pour la livraison. Il génère la structure, les hooks, l'admin, les endpoints en quelques minutes. Il rate systématiquement une partie des contrôles de capacité, de nonce et de validation, et il invente parfois des fonctions. Un plugin publiable demande encore une relecture humaine complète."}}, {"@type": "Question", "name": "Claude Code remplace-t-il un développeur WordPress ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Il déplace le travail : moins de frappe, plus de spécification et de revue. Sur mon projet, le temps de production PHP a baissé d'environ un tiers, mais le temps d'analyse et de test n'a pas bougé - c'est lui qui garantit que le code est juste."}}, {"@type": "Question", "name": "Ça fonctionne avec ACF, WooCommerce ou un thème premium ?", "acceptedAnswer": {"@type": "Answer", "text": "Partiellement. Il connaît les API publiques les plus courantes, pas les hooks spécifiques d'un thème commercial ni les versions exactes installées chez toi. La parade : pointer les fichiers du plugin dans le prompt, coller les signatures de fonctions concernées, et lui interdire explicitement de remplacer une meta ACF par du post_meta brut."}}, {"@type": "Question", "name": "Faut-il savoir coder pour l'utiliser sur WordPress ?", "acceptedAnswer": {"@type": "Answer", "text": "Pour du prototypage, non. Pour de la production, oui. Un agent qui produit du code plausible est plus dangereux pour quelqu'un qui ne peut pas l'évaluer que pas d'agent du tout. C'est précisément pour ça que je commence toujours mes formations WordPress par les bases de PHP et la logique de sécurisation."}}]}]}</script><script src="navigation.js" defer></script><script src="consent.js" defer></script></head>
+<body><a class="skip" href="#main">Aller au contenu</a><header class="site-header">
+            <a class="brand" href="index.html"><span class="brand-icon">n.</span><span>Nicolas<br><b>Genaudet</b></span></a>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu <span aria-hidden="true">☰</span></button>
+            <nav id="primary-navigation" aria-label="Navigation principale">
+                <a href="index.html#expertises">Expertises</a><a href="index.html#parcours">Écoles & jurys</a><a href="index.html#formations">Formations</a><a href="index.html#financement">Financement</a><a href="blog.html" aria-current="page">Blog</a>
+            </nav>
+            <a class="button coral small" href="index.html#contact">Parlons formation <span>↗</span></a>
+        </header><main id="main"><div class="wrap article-shell"><nav class="breadcrumbs" aria-label="Fil d’Ariane"><a href="index.html">Accueil</a><span aria-hidden="true">/</span><a href="blog.html">Blog</a></nav><article><div class="article-heading"><span class="eyebrow">DÉVELOPPEMENT · OUTILS IA</span><h1>Claude Code WordPress : ce que ça change vraiment sur un projet client</h1><p class="article-meta">Par <a href="index.html#parcours">Nicolas Genaudet</a>, formateur à Lyon · <time datetime="2026-10-20">20 octobre 2026</time> · 13 min de lecture</p></div><div class="article-layout"><div class="article-content"><h2 id="en-bref">En bref</h2>
+<p>Claude Code WordPress, c&#x27;est utiliser un agent qui vit dans ton terminal : il lit ton dépôt, écrit les fichiers, lance <code>wp</code> et <code>composer lint</code>, puis te montre un <code>git diff</code>. Sur un projet client réel (thème enfant + plugin sur mesure + audit d&#x27;un site hérité), ça m&#x27;a fait gagner environ un tiers du temps de production PHP - et zéro minute sur la partie design.</p>
+<p>Ce qu&#x27;il ne fait pas : il ne connaît pas ton client, il n&#x27;ouvre pas ton navigateur à ta place, et il oublie régulièrement les <code>current_user_can()</code>. Trois garde-fous non négociables : revue humaine ligne par ligne, PHPCS + Query Monitor, et aucun push en prod sans passage par un staging.</p>
+<p>Voilà le détail, avec les prompts et les blocs de code que j&#x27;ai réellement utilisés.</p>
+<h2 id="ce-que-claude-code-change-et-ne-change-pas-pour-un-dev-wordpress">Ce que Claude Code change (et ne change pas) pour un dev WordPress</h2>
+<p>La bascule n&#x27;est pas « de l&#x27;autocomplétion en mieux ». Elle est ailleurs.</p>
+<p>Un assistant classique complète la ligne que tu es en train d&#x27;écrire. Claude Code prend une <strong>tâche</strong> : « ajoute un CPT <code>témoignage</code> avec une taxonomie, une page d&#x27;admin et les templates associés ». Il ouvre les fichiers concernés, crée ce qui manque, enregistre les hooks, lance <code>wp rewrite flush --hard</code>, et te rend la main avec une liste de changements.</p>
+<p>Concrètement, ce qui change dans mon quotidien de développement WordPress :</p>
+<ul><li><strong>La cartographie d&#x27;un codebase inconnu.</strong> Il lit 40 fichiers PHP en deux minutes et me sort l&#x27;arbre des hooks. Avant, c&#x27;était une demi-journée de <code>grep</code>.</li><li><strong>Les tâches répétitives multi-fichiers.</strong> Déclarer un CPT, son bloc d&#x27;admin, ses colonnes de liste, ses capabilities : le genre de chose où je fais une faute de frappe toutes les trois lignes.</li><li><strong>Le contexte persistant.</strong> Un fichier <code>CLAUDE.md</code> bien écrit remplace trois paragraphes de rappel à chaque conversation. Ça, c&#x27;est le vrai gain.</li><li><strong>Les scripts jetables.</strong> Migrer 600 meta <code>_prix</code> en <code>_bf_prix</code> ? Il écrit le script WP-CLI, je le relis, je le lance en local.</li></ul>
+<p>Et ce qu&#x27;il ne change pas - c&#x27;est la partie que les vidéos YouTube oublient :</p>
+<ul><li><strong>La sécurité reste ton problème.</strong> Il produit du code plausible qui <em>a l&#x27;air</em> sûr. Un nonce manquant reste un nonce manquant, même quand il est écrit dans un joli fichier bien indenté.</li><li><strong>Le contexte exotique.</strong> ACF Pro, un thème premium qui fait des choses bizarres, un plugin métier des années 2015 : il ne les connaît pas. Il invente une API crédible.</li><li><strong>Le goût.</strong> La hiérarchie visuelle, le choix d&#x27;une typo, la pertinence d&#x27;un parcours d&#x27;inscription : rien de tout ça ne sort d&#x27;un terminal.</li><li><strong>Le debug infra.</strong> OPcache, WAF, timeout PHP, un certificat intermédiaire manquant. Là, tu es seul.</li></ul>
+<p>Une nuance importante : la qualité de sortie dépend directement de la qualité de ton brief. « Fais-moi un plugin de réservation » donne du code générique. Un brief avec la version de PHP, le text domain, les capabilities et le format de réponse attendu donne du code utilisable. C&#x27;est un changement de métier : on passe de tapeur de code à rédacteur de spécifications.</p>
+<h2 id="installer-et-configurer-claude-code-pour-un-projet-wordpress">Installer et configurer Claude Code pour un projet WordPress</h2>
+<p>La configuration, c&#x27;est le vrai tutoriel Claude Code : tout se joue là. Un agent mal cadré produit du code hors sujet pendant que tu brûles des jetons.</p>
+<p><strong>Installation.</strong> Sur macOS, Linux ou WSL, l&#x27;installeur natif se met à jour tout seul :</p>
+<pre><code class="language-bash">curl -fsSL https://claude.ai/install.sh | bash
+# ou : brew install --cask claude-code
+claude --version</code></pre>
+<p><strong>Le répertoire de travail.</strong> Erreur n°1 : lancer <code>claude</code> à la racine de WordPress. Tu traînes 2 000 fichiers de core dans le contexte et tu doubles le bruit. Je me place dans le dossier que je modifie : <code>cd wp-content/plugins/bf-annuaire</code>.</p>
+<p><strong>Le</strong> <code>CLAUDE.md</code><strong>.</strong> Lance <code>/init</code> une fois, puis réécris le fichier à la main. Le mien ressemble à ça :</p>
+<pre><code class="language-markdown"># Projet : plugin « Annuaire Clients » - client Bouchon &amp; Fils
+
+## Environnement
+- WordPress 6.8, PHP 8.2, MySQL 8, local via wp-env
+- Thème parent : Blocksy 2.x + ACF Pro 6.x (ne jamais remplacer par des meta natives)
+- Préfixe global : `bf_` - namespace `Bouchon\Annuaire` - text domain `bf-annuaire`
+
+## Règles de code
+- WordPress Coding Standards obligatoires (PHPCS, ruleset WordPress)
+- Tabs, jamais d&#x27;espaces. `array()` long, jamais `[]`.
+- Une classe par fichier, nommage `class-bf-&lt;nom&gt;.php`
+- Chaque lecture/écriture de données passe par une capability check explicite
+- Sortie toujours échappée : esc_html, esc_attr, esc_url, wp_kses_post
+- Entrée toujours `wp_unslash()` + sanitize. Aucun `$_POST` brut.
+
+## Commandes utiles
+- `composer lint` → PHPCS
+- `wp plugin list --status=active` → état réel des plugins
+- `wp rewrite flush --hard` après tout changement de rewrite
+
+## Interdits
+- Ne jamais modifier `wp-config.php`, `.htaccess`, `wp-content/uploads`
+- Ne jamais toucher au thème parent
+- Pas de `git push`, pas de `wp db` sauf `wp db export` en local</code></pre>
+<p><strong>Les permissions.</strong> Dans <code>.claude/settings.json</code>, j&#x27;autorise les lectures et j&#x27;interdis les gestes irréversibles :</p>
+<pre><code class="language-json">{
+  &quot;permissions&quot;: {
+    &quot;allow&quot;: [&quot;Bash(wp plugin list:*)&quot;, &quot;Bash(composer lint:*)&quot;, &quot;Bash(git diff:*)&quot;],
+    &quot;deny&quot;: [&quot;Bash(git push:*)&quot;, &quot;Bash(wp db reset:*)&quot;, &quot;Bash(rm -rf:*)&quot;]
+  }
+}</code></pre>
+<p><strong>Le Plan Mode.</strong> <code>Shift+Tab</code> jusqu&#x27;à « plan », ou <code>claude --permission-mode plan</code>. Il explore, propose un plan, n&#x27;écrit rien. Tu valides, ou tu édites le plan avec <code>Ctrl+G</code>. Pour tout ce qui touche plus de trois fichiers, je ne travaille plus autrement.</p>
+<p><strong>Les commandes maison.</strong> Un fichier par tâche dans <code>.claude/commands/</code> : <code>/audit-secu</code>, <code>/maj-pot</code>, <code>/revue-diff</code>. Trois lignes de Markdown qui te font gagner dix minutes par jour.</p>
+<h2 id="cas-d-usage-1-creer-un-plugin-wordpress-sur-mesure">Cas d&#x27;usage 1 : créer un plugin WordPress sur mesure</h2>
+<p>Claude Code plugin WordPress personnalisé : c&#x27;est le premier test que j&#x27;ai fait, et celui qui m&#x27;a convaincu.</p>
+<p>Le projet : un endpoint REST qui expose les fiches clients du CPT <code>client</code>, pour un back-office React maison. Avant de lancer quoi que ce soit, <code>wp scaffold plugin bf-annuaire --plugin_author=&quot;Nicolas Genaudet&quot;</code> pour avoir une base propre, puis ce prompt :</p>
+<pre><code class="language-text">Contexte : ./wp-content/plugins/bf-annuaire
+Tâche : ajouter un endpoint REST GET /bf/v1/clients qui renvoie la liste paginée du CPT &quot;client&quot;.
+Contraintes :
+- permission_callback obligatoire, capability &quot;edit_posts&quot;
+- args validés via validate_callback + sanitize_callback
+- réponse via WP_REST_Response, pagination exposée dans X-WP-Total
+- aucune requête SQL directe, uniquement WP_Query
+- code conforme WPCS, tabs, text domain bf-annuaire
+Avant d&#x27;écrire : propose un plan (fichiers touchés + signatures), attends mon OK.</code></pre>
+<p>Il m&#x27;a rendu quatre fichiers et un diff propre. J&#x27;ai corrigé trois choses, et elles sont instructives :</p>
+<ol><li><code>permission_callback</code> <strong>en</strong> <code>__return_true</code><strong>.</strong> Il savait que je voulais <code>edit_posts</code>, il a mis la version qui « fonctionne quand on teste ».</li><li><code>sanitize_text_field()</code> <strong>sur un tableau.</strong> Un tableau de meta, passé dans une fonction qui attend une chaîne.</li><li><code>&#x27;posts_per_page&#x27; =&gt; -1</code><strong>.</strong> La valeur par défaut de tout ce qui ressemble à une liste, et l&#x27;assurance de faire exploser la mémoire dans six mois.</li></ol>
+<p>Le squelette final, celui que je garde comme gabarit :</p>
+<pre><code class="language-php">add_action( &#x27;admin_post_bf_save_client&#x27;, &#x27;bf_save_client&#x27; );
+
+function bf_save_client() {
+	if ( ! current_user_can( &#x27;edit_posts&#x27; ) ) {
+		wp_die( esc_html__( &#x27;Action non autorisée.&#x27;, &#x27;bf-annuaire&#x27; ) );
+	}
+
+	check_admin_referer( &#x27;bf_save_client&#x27;, &#x27;bf_nonce&#x27; );
+
+	$name = isset( $_POST[&#x27;bf_name&#x27;] )
+		? sanitize_text_field( wp_unslash( $_POST[&#x27;bf_name&#x27;] ) )
+		: &#x27;&#x27;;
+
+	update_post_meta( absint( $_POST[&#x27;post_id&#x27;] ), &#x27;_bf_name&#x27;, $name );
+
+	wp_safe_redirect( add_query_arg( &#x27;bf_saved&#x27;, &#x27;1&#x27;, wp_get_referer() ) );
+	exit;
+}</code></pre>
+<p>Résultat : 2 h 30 au lieu de 5 h estimées, 280 lignes livrées, dont 40 % que j&#x27;ai réécrites. Les règles de sécurité et de validation viennent toujours de la doc officielle du Plugin Handbook - <a href="https://developer.wordpress.org/plugins/wordpress-org/common-issues/">Common issues</a> est la page que je fais lire à l&#x27;agent en début de session.</p>
+<h2 id="cas-d-usage-2-refactoriser-un-theme-enfant">Cas d&#x27;usage 2 : refactoriser un thème enfant</h2>
+<p>Le contexte : un thème enfant de 2019, un <code>functions.php</code> de 912 lignes, quatorze fonctions préfixées <code>my_</code>, et un CSS chargé deux fois. Le client voulait ajouter un module de blog ; j&#x27;ai refusé de poser une brique dessus.</p>
+<p>J&#x27;ai demandé une cartographie avant tout refactoring, en lecture seule : « liste chaque fonction de functions.php, son hook, et ce qu&#x27;elle modifie ». Puis j&#x27;ai attaqué par lots, un objectif par commit.</p>
+<p>Ce qu&#x27;il a produit de vraiment bon : l&#x27;extraction en quatre fichiers <code>inc/</code> avec un autoload manuel, et cette version de l&#x27;enqueue - là où le thème enfant chargeait son CSS sans dépendance, donc dans le désordre :</p>
+<pre><code class="language-php">add_action( &#x27;wp_enqueue_scripts&#x27;, &#x27;bf_enqueue_child_styles&#x27; );
+
+function bf_enqueue_child_styles() {
+	$parent_handle = &#x27;parent-theme-style&#x27;; // handle réel du thème parent
+	$path          = get_stylesheet_directory() . &#x27;/style.css&#x27;;
+
+	wp_enqueue_style(
+		&#x27;bf-child&#x27;,
+		get_stylesheet_uri(),
+		array( $parent_handle ),
+		(string) filemtime( $path ) // cache-busting à chaque déploiement
+	);
+}</code></pre>
+<p>La <a href="https://developer.wordpress.org/themes/advanced-topics/child-themes/">doc officielle des thèmes enfants</a> insiste d&#x27;ailleurs sur ce point : vérifie d&#x27;abord comment le parent charge ses styles, chaque thème fait différemment.</p>
+<p>Ce qu&#x27;il a raté : il a supprimé <code>my_redirect_after_login()</code>. Elle n&#x27;était appelée nulle part dans le thème… mais un plugin de fidélisation la rappelait par <code>function_exists()</code>. Deux heures de perte sur un staging. Depuis, j&#x27;ajoute systématiquement dans le prompt : « avant de supprimer une fonction, cherche son nom dans tout <code>wp-content</code>, y compris les plugins ».</p>
+<p>Bilan : <code>functions.php</code> passé de 912 à 178 lignes, quatre fichiers dans <code>inc/</code>, aucune régression fonctionnelle détectée en recette.</p>
+<h2 id="cas-d-usage-3-audit-et-revue-de-code-d-un-site-existant">Cas d&#x27;usage 3 : audit et revue de code d&#x27;un site existant</h2>
+<p>C&#x27;est l&#x27;usage le plus sous-estimé. Le site d&#x27;un client, repris d&#x27;une agence, avec un plugin custom de 12 fichiers PHP que personne n&#x27;avait relu depuis trois ans.</p>
+<p>Le prompt, en lecture seule :</p>
+<pre><code class="language-text">Mode lecture seule. Ne modifie aucun fichier.
+Périmètre : ./wp-content/plugins/accroche-custom (12 fichiers PHP).
+Pour chaque fichier, signale :
+1. entrées non validées (superglobales)
+2. sorties non échappées
+3. requêtes SQL non préparées (hors $wpdb-&gt;prepare)
+4. absence de current_user_can / check_admin_referer sur les actions
+5. points de performance : WP_Query en -1, meta_query non indexée, absence de cache
+Sortie : tableau markdown trié par sévérité (critique / majeur / mineur),
+avec fichier:ligne et correctif en une phrase.</code></pre>
+<p>Sortie : 3 critiques, 9 majeurs, 14 mineurs. Les trois critiques étaient réels - un <code>$_GET</code> passé directement dans une requête, une action AJAX sans nonce, un <code>echo</code> d&#x27;une option non échappée. Le genre de chose qu&#x27;un audit manuel laisse filer après deux heures de lecture.</p>
+<p>Ce qu&#x27;il ne voit pas, en revanche : une faille dans un plugin tiers, un XSS stocké alimenté par une option enregistrée ailleurs dans le site, une mauvaise configuration serveur. L&#x27;agent ne regarde que ce que tu lui donnes.</p>
+<p>D&#x27;où la combinaison que j&#x27;impose maintenant sur tout audit :</p>
+<ul><li><strong>PHPCS avec le ruleset WordPress Coding Standards</strong> - la référence est la page <a href="https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/">PHP Coding Standards</a>, et l&#x27;outillage officiel est sur <a href="https://github.com/WordPress/WordPress-Coding-Standards">WordPress-Coding-Standards</a>.</li><li><a href="https://wordpress.org/plugins/query-monitor/"><strong>Query Monitor</strong></a> pour les requêtes lentes, les doublons et les hooks réellement déclenchés. Un agent ne peut pas te dire qu&#x27;une requête met 800 ms ; Query Monitor, si.</li><li><code>git diff</code> <strong>relu ligne par ligne.</strong> Pas de « ça a l&#x27;air bon ». 22 lignes sur un audit de cette taille cachent facilement une régression.</li></ul>
+<h2 id="claude-code-vs-cursor-lequel-pour-wordpress">Claude Code vs Cursor : lequel pour WordPress ?</h2>
+<p>C&#x27;est la question la plus tapée des deux en France - 480 recherches mensuelles pour « claude code vs cursor », contre 70 pour « claude code wordpress » (données DataForSEO, octobre 2026). Et la réponse courte est : ce ne sont pas les mêmes outils, donc pas les mêmes moments.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tableau comparatif"><table><thead><tr><th scope="col"></th><th scope="col">Claude Code</th><th scope="col">Cursor</th></tr></thead><tbody><tr><td><strong>Interface</strong></td><td>Terminal</td><td>Éditeur (fork de VS Code)</td></tr><tr><td><strong>Où il travaille</strong></td><td>Tout le dépôt, exécute des commandes</td><td>Les fichiers ouverts, plus un contexte projet</td></tr><tr><td><strong>Point fort sur WordPress</strong></td><td>Multi-fichiers, WP-CLI, scripts de migration, audits</td><td>CSS, templates, retouche visuelle, diff côte à côte</td></tr><tr><td><strong>Validation des changements</strong></td><td><code>git diff</code> en terminal</td><td>Accepter / refuser bloc par bloc</td></tr><tr><td><strong>Boucle test-réflexion</strong></td><td>Lance PHPUnit ou PHPCS et corrige seul</td><td>Possible, moins naturel</td></tr><tr><td><strong>Mon usage réel</strong></td><td>Plugin custom, refactoring, audit</td><td>Intégration d&#x27;une maquette, ajustements de design</td></tr></tbody></table></div>
+<p>En pratique, je vis dans les deux. Claude Code pour tout ce qui dépasse un fichier et touche au PHP métier ; Cursor quand je dois voir le rendu d&#x27;une grille CSS et arbitrer à l&#x27;œil. Rien n&#x27;empêche de lancer Claude Code dans le terminal intégré de Cursor, c&#x27;est même ce que je fais la moitié du temps. La comparaison médiatisée autour de « l&#x27;un va tuer l&#x27;autre » ne résiste pas à une journée de vrai travail.</p>
+<p>Un point que personne ne mesure dans ces comparatifs : le coût cognitif. Déléguer à un agent en terminal demande une discipline de brief. Rester dans un éditeur qui propose demande une discipline de refus. Ce n&#x27;est pas la même fatigue en fin de journée.</p>
+<h2 id="les-pieges-que-j-ai-rencontres">Les pièges que j&#x27;ai rencontrés</h2>
+<p>Sept, dans l&#x27;ordre de gravité décroissante.</p>
+<ol><li><strong>La confiance sur la sécurité.</strong> Il oublie <code>current_user_can()</code>, il met <code>__return_true</code> dans un <code>permission_callback</code>, il échappe une sortie HTML avec <code>esc_html()</code> au lieu de <code>wp_kses_post()</code>. À chaque session. La checklist de revue, c&#x27;est moi qui la porte, pas lui.</li><li><strong>La fonction inventée.</strong> <code>wp_get_post_terms_by()</code> n&#x27;existe pas. Ça compile visuellement, ça casse à l&#x27;exécution. Réflexe : vérifier chaque fonction inconnue sur <a href="https://developer.wordpress.org/">developer.wordpress.org</a>.</li><li><strong>Le contexte pollué.</strong> Laisse-le lire tout <code>wp-content</code>, et il te proposera des solutions basées sur un plugin que tu as désactivé en 2023. Périmètre serré, toujours.</li><li><strong>Le refactor trop large.</strong> « Nettoie ce plugin » donne 40 fichiers modifiés et un diff illisible. Règle : un commit, un objectif, un diff relisible en trois minutes.</li><li><strong>Le CSS qui marche mais casse la DA.</strong> Il produit du CSS valide et générique. Le rendu est propre, et complètement à côté de la charte.</li><li><strong>Le secret dans le contexte.</strong> Un <code>wp-config.php</code> dans le répertoire de travail, et les identifiants de base partent dans la conversation. Je sors le fichier, systématiquement.</li><li><strong>La prod.</strong> Jamais. <code>git</code>, staging, sauvegarde, et un humain qui appuie sur le bouton. C&#x27;est le garde-fou que je refuse de déléguer, même pour un fix d&#x27;une ligne.</li></ol>
+<p><strong>Passer à la pratique.</strong> Si tu veux apprendre à cadrer ce genre d&#x27;outil sur un vrai projet, plutôt que de collectionner des démos, notre formation <strong>« Créer un site WordPress »</strong> (21 h, Lyon ou à distance) couvre la chaîne complète : environnement local, thème enfant, plugin maison, mise en ligne. Les bases de PHP et de sécurité qu&#x27;on y pose sont exactement celles qui manquent à l&#x27;agent. Toutes nos formations WordPress à Lyon sont en petit groupe, avec un vrai site de A à Z - c&#x27;est le format le plus efficace pour prendre les bons réflexes de revue.</p>
+<h2 id="faq">FAQ</h2>
+<p><strong>Claude Code peut-il créer un plugin WordPress complet de A à Z ?</strong> Oui pour le squelette, non pour la livraison. Il génère la structure, les hooks, l&#x27;admin, les endpoints en quelques minutes. Il rate systématiquement une partie des contrôles de capacité, de nonce et de validation, et il invente parfois des fonctions. Un plugin publiable demande encore une relecture humaine complète.</p>
+<p><strong>Claude Code remplace-t-il un développeur WordPress ?</strong> Non. Il déplace le travail : moins de frappe, plus de spécification et de revue. Sur mon projet, le temps de production PHP a baissé d&#x27;environ un tiers, mais le temps d&#x27;analyse et de test n&#x27;a pas bougé - c&#x27;est lui qui garantit que le code est juste.</p>
+<p><strong>Ça fonctionne avec ACF, WooCommerce ou un thème premium ?</strong> Partiellement. Il connaît les API publiques les plus courantes, pas les hooks spécifiques d&#x27;un thème commercial ni les versions exactes installées chez toi. La parade : pointer les fichiers du plugin dans le prompt, coller les signatures de fonctions concernées, et lui interdire explicitement de remplacer une meta ACF par du <code>post_meta</code> brut.</p>
+<p><strong>Faut-il savoir coder pour l&#x27;utiliser sur WordPress ?</strong> Pour du prototypage, non. Pour de la production, oui. Un agent qui produit du code plausible est plus dangereux pour quelqu&#x27;un qui ne peut pas l&#x27;évaluer que pas d&#x27;agent du tout. C&#x27;est précisément pour ça que je commence toujours mes formations WordPress par les bases de PHP et la logique de sécurisation.</p>
+<h2 id="sources-utiles">Sources utiles</h2>
+<ul><li><a href="https://code.claude.com/docs/en/best-practices">Best practices for Claude Code</a> - la boucle explorer / planifier / implémenter / vérifier</li><li><a href="https://code.claude.com/docs/en/memory">How Claude remembers your project</a> - <code>CLAUDE.md</code>, auto-mémoire, <code>/memory</code>, <code>/context</code></li><li><a href="https://code.claude.com/docs/en/permissions">Configure permissions</a> - allow / deny, hooks <code>PreToolUse</code></li><li><a href="https://code.claude.com/docs/en/quickstart">Quickstart Claude Code</a> - installation et <code>/init</code></li><li><a href="https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/">WordPress PHP Coding Standards</a> - le ruleset PHPCS de référence</li><li><a href="https://developer.wordpress.org/plugins/wordpress-org/common-issues/">Common issues - Plugin Handbook</a> - nonces, sanitize, escape</li><li><a href="https://developer.wordpress.org/themes/advanced-topics/child-themes/">Child Themes - Theme Handbook</a> - chargement des styles du parent</li><li><a href="https://developer.wordpress.org/cli/commands/scaffold/plugin/">wp scaffold plugin - WP-CLI</a> - base de plugin propre</li><li><a href="https://wordpress.org/plugins/query-monitor/">Query Monitor</a> - requêtes, hooks, erreurs PHP</li></ul><aside class="article-cta"><span class="eyebrow">PASSER À LA PRATIQUE</span><h2>Votre prochain projet commence ici.</h2><p>Progressez en WordPress et en UX/UI avec Nicolas Genaudet, à Lyon ou à distance.</p><a class="button coral" href="index.html#formations">Explorer les formations ↗</a> <a class="course-link" href="https://nicolas-genaudet.fr/#contact">Parlons de votre projet ↗</a></aside><aside class="related"><h2>À lire aussi</h2><ul><li><a href="creer-site-wordpress-ia.html">Créer un site WordPress avec IA ↗</a></li><li><a href="seo-avec-ia.html">SEO avec IA : la méthode ↗</a></li></ul></aside></div><details class="article-toc" open><summary>Dans cet article</summary><ol><li><a href="#en-bref">En bref</a></li><li><a href="#ce-que-claude-code-change-et-ne-change-pas-pour-un-dev-wordpress">Ce que Claude Code change (et ne change pas) pour un dev WordPress</a></li><li><a href="#installer-et-configurer-claude-code-pour-un-projet-wordpress">Installer et configurer Claude Code pour un projet WordPress</a></li><li><a href="#cas-d-usage-1-creer-un-plugin-wordpress-sur-mesure">Cas d&#x27;usage 1 : créer un plugin WordPress sur mesure</a></li><li><a href="#cas-d-usage-2-refactoriser-un-theme-enfant">Cas d&#x27;usage 2 : refactoriser un thème enfant</a></li><li><a href="#cas-d-usage-3-audit-et-revue-de-code-d-un-site-existant">Cas d&#x27;usage 3 : audit et revue de code d&#x27;un site existant</a></li><li><a href="#claude-code-vs-cursor-lequel-pour-wordpress">Claude Code vs Cursor : lequel pour WordPress ?</a></li><li><a href="#les-pieges-que-j-ai-rencontres">Les pièges que j&#x27;ai rencontrés</a></li><li><a href="#faq">FAQ</a></li><li><a href="#sources-utiles">Sources utiles</a></li></ol></details></div></article></div></main><footer class="wrap"><a href="index.html">Accueil</a><a href="blog.html">Blog</a><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><button data-cookie-settings>Gérer les cookies</button><p>© 2026 Nicolas Genaudet EI</p></footer><aside id="cookie-banner" class="cookie-banner" role="region" aria-label="Préférences de mesure d’audience" hidden>
+            <div>
+                <h2>La mesure d’audience, à votre choix.</h2>
+                <p>
+                    Avec votre accord, Google Analytics mesure les visites pour améliorer ce site. Vous pouvez refuser et continuer à naviguer, ou changer d’avis depuis « Gérer les cookies ».
+                </p>
+                <a href="confidentialite.html">En savoir plus sur vos données</a>
+            </div>
+            <div class="cookie-actions">
+                <button data-reject>Refuser</button><button data-accept>Accepter Analytics</button>
+            </div>
+        </aside></body></html>

@@ -47,3 +47,17 @@ Les formations personnelles sont facturées par Nicolas et payables en trois vir
 GA4 G-NWBTJB68HL : mode de consentement basique, chargement uniquement après acceptation, refus équivalent, retrait au pied de page. Préférence conservée six mois, cookies GA configurés pour treize mois sans renouvellement de l’échéance. Publicité et Google Signals désactivés par la configuration locale. Aucun chargement Analytics dans les aperçus locaux. Vérifier aussi les paramètres GA4 (durée de conservation, partage, mesure améliorée et éventuels usages supplémentaires).
 
 Vérification : `node tests/consent.mjs`. Références : https://developers.google.com/tag-platform/security/concepts/consent-mode et https://entreprendre.service-public.gouv.fr/vosdroits/F33338.
+
+## Blog statique
+
+La rubrique est accessible dans `blog.html`. Les cinq articles sont conservés en Markdown dans `content/blog/` et générés en HTML pour être lisibles et indexables sans JavaScript.
+
+Après une modification des contenus, lancer :
+
+```sh
+python3 scripts/build-blog.py
+```
+
+Le script reprend le menu de l’accueil et génère les articles, le sommaire, les métadonnées et les données structurées Article, Person et FAQPage (HowTo pour le tutoriel Claude Design). Les consignes de visuels et de balisage fournies dans les textes restent dans les sources, sans être affichées aux lecteurs. Les portraits et captures n’ont pas encore été fournis. Les affirmations et retours d’expérience des textes ChatSEO doivent être relus par l’auteur avant mise en ligne.
+
+Pour ajouter un article, créer sa source Markdown et compléter `POSTS` dans `scripts/build-blog.py`. Le générateur ajoute les URL au sitemap, et `scripts/build-seo.mjs` reprend automatiquement les sources du blog. Les FAQ sont reconnues sous forme de titres H3 ou de questions en gras ; les réponses du balisage reprennent le texte visible. Le comparatif des assistants SEO comprend aussi une liste structurée des cinq outils.
