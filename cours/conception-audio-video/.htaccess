@@ -1,0 +1,6 @@
+Options -Indexes -MultiViews
+DirectoryIndex access.php
+# Toutes les requêtes, y compris les images et index.html, passent par PHP.
+RewriteEngine On
+RewriteRule ^access\.php$ - [END]
+RewriteRule ^ access.php [END]

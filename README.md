@@ -67,4 +67,12 @@ Pour ajouter un article, créer sa source Markdown et compléter `POSTS` dans `s
 
 Le cours INSEEC « Conception audio & vidéo » (18 heures, MSc2 MCSC) est accessible à `/cours/conception-audio-video/` après déploiement du dépôt. Le dossier contient une page autonome avec styles et scripts locaux, les 77 diapositives originales et une transcription source JSON. Aucun outil de compilation n’est nécessaire.
 
-Le cours reste absent du menu public et du sitemap. La balise `noindex,nofollow` limite son indexation ; la protection par code n’est pas encore mise en place.
+Le cours reste absent du menu public et du sitemap. La balise `noindex,nofollow` limite son indexation ; l’accès est désormais contrôlé côté serveur par `access.php` et les règles Apache locales. Le même contrôle protège les images, les styles et les scripts. Les sources JSON et la documentation ne sont pas servies.
+
+### Accès au cours
+
+Code partagé à quatre chiffres : empreinte configurée dans `cours/conception-audio-video/access-config.php`. La session dure quatre heures, avec cookies Secure, HttpOnly et SameSite=Lax. Après cinq échecs par adresse IP, les tentatives sont suspendues cinq minutes. Le compteur est conservé dans le dossier temporaire PHP, hors de la racine web. Une modification de l’empreinte invalide les sessions précédentes.
+
+Nécessite PHP 7.4+ et Apache avec mod_rewrite/AllowOverride sur l’hébergement. Déployer aussi le fichier caché `.htaccess` du cours. La protection du site ne modifie pas la visibilité du dépôt GitHub.
+
+Test local : lancer le serveur PHP avec `php -S 127.0.0.1:8766 cours/conception-audio-video/access.php`, puis exécuter `python3 tests/course-access.py http://127.0.0.1:8766/cours/conception-audio-video/` et saisir le code sur l’entrée standard. Le test finit par déclencher la limite de tentatives locale ; attendre cinq minutes avant de le relancer. Le routage Apache doit également être vérifié après déploiement.
