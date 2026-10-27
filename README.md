@@ -76,3 +76,11 @@ Code partagé à quatre chiffres : empreinte configurée dans `cours/conception-
 Nécessite PHP 7.4+ et Apache avec mod_rewrite/AllowOverride sur l’hébergement. Déployer aussi le fichier caché `.htaccess` du cours. La protection du site ne modifie pas la visibilité du dépôt GitHub.
 
 Test local : lancer le serveur PHP avec `php -S 127.0.0.1:8766 cours/conception-audio-video/access.php`, puis exécuter `python3 tests/course-access.py http://127.0.0.1:8766/cours/conception-audio-video/` et saisir le code sur l’entrée standard. Le test finit par déclencher la limite de tentatives locale ; attendre cinq minutes avant de le relancer. Le routage Apache doit également être vérifié après déploiement.
+
+### Version pédagogique enrichie du 27 octobre 2026
+
+53 slides révisées réparties en dix chapitres, dont 17 compléments pédagogiques. Palette inspirée du support original (bleu, lavande, corail), ateliers dédiés, cinq schémas éditables, recherche et diaporama avec flèches clavier / Échap. Les 77 images originales restent dans les archives du cours.
+
+Modifier `cours/conception-audio-video/slides.json`, puis lancer `python3 scripts/build-course.py`. Les schémas se trouvent dans `scripts/course_visuals.py`. Vérifier avec `python3 tests/course-content.py` et `node --check cours/conception-audio-video/app.js`.
+
+L’audit détaillé est dans `audits/audit-conception-audio-video-2026-10-27.md`. Il distingue les corrections effectuées et les points à confirmer par le formateur. La protection par code existante est conservée.

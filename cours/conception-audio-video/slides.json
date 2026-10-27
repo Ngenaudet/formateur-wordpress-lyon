@@ -1,0 +1,1511 @@
+{
+  "version": "2026-10-27",
+  "chapters": [
+    {
+      "id": "cap",
+      "title": "Le cap de la formation",
+      "description": "Comprendre le projet, le parcours et les règles du jeu.",
+      "slides": [
+        {
+          "title": "Conception audio & vidéo",
+          "lead": "18 heures pour passer d’une idée à trois vidéos qui servent un objectif.",
+          "items": [
+            {
+              "title": "STRATÉGIE",
+              "text": "À qui parle-t-on ? Quel problème veut-on résoudre ?"
+            },
+            {
+              "title": "CRÉATION",
+              "text": "Écrire, préparer, filmer et monter un message clair."
+            },
+            {
+              "title": "DIFFUSION",
+              "text": "Exporter, partager et expliquer ses choix."
+            }
+          ],
+          "kind": "ouverture",
+          "source_pages": [
+            1,
+            7,
+            11
+          ],
+          "takeaway": "Un bon rendu commence par une intention claire.",
+          "added": false
+        },
+        {
+          "title": "Votre équipage, votre formateur",
+          "lead": "Nicolas Genaudet · Formateur et intégrateur web, passionné de WordPress.",
+          "items": [
+            {
+              "title": "LE TOUR DE TABLE",
+              "text": "Présentez-vous : votre expérience en audio/vidéo, un contenu qui vous inspire et votre attente principale."
+            },
+            {
+              "title": "LE BRISE-GLACE",
+              "text": "24 h de triathlon, un koala photographié et le tour du Mont-Blanc en randonnée : trois anecdotes pour faire connaissance."
+            },
+            {
+              "title": "LE CADRE",
+              "text": "Participation, respect des personnes, présence et critiques constructives. On critique un choix créatif, jamais une personne."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            10
+          ],
+          "takeaway": "Votre expérience de départ compte moins que votre capacité à tester et à progresser.",
+          "added": false
+        },
+        {
+          "title": "À la fin, vous saurez…",
+          "lead": "Quatre compétences, observables dans votre projet.",
+          "items": [
+            {
+              "title": "01 · DÉFINIR",
+              "text": "Relier objectif, cible, message et canal de diffusion."
+            },
+            {
+              "title": "02 · PRÉPARER",
+              "text": "Passer d’une trame à un script et à un storyboard exploitables."
+            },
+            {
+              "title": "03 · PRODUIRE",
+              "text": "Tourner et monter des images et un son compréhensibles."
+            },
+            {
+              "title": "04 · JUSTIFIER",
+              "text": "Présenter une réalisation et expliquer les choix faits avec vos moyens."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            7,
+            8
+          ],
+          "takeaway": "Chaque étape produit un document ou un fichier vérifiable.",
+          "added": false
+        },
+        {
+          "title": "Le parcours en 18 heures",
+          "lead": "Une proposition de découpage en six séquences de trois heures, à adapter avec le formateur.",
+          "items": [],
+          "kind": "cours",
+          "source_pages": [],
+          "takeaway": "18 heures au total. Le temps de passage dépend du nombre de groupes ; il est annoncé en début de formation.",
+          "added": true,
+          "table": {
+            "headers": [
+              "Séquence",
+              "Travail principal",
+              "Jalon de sortie"
+            ],
+            "rows": [
+              [
+                "1 · 3 h",
+                "Stratégie, inspirations et choix du produit",
+                "Brief validé"
+              ],
+              [
+                "2 · 3 h",
+                "Trame, script, storyboard et planning",
+                "Préproduction validée"
+              ],
+              [
+                "3 · 3 h",
+                "Tests image/son et exercice de 15 secondes",
+                "Premier montage individuel"
+              ],
+              [
+                "4 · 3 h",
+                "Tournage du projet et premières sélections",
+                "Rushes exploitables"
+              ],
+              [
+                "5 · 3 h",
+                "Montage des trois vidéos",
+                "Versions de travail"
+              ],
+              [
+                "6 · 3 h",
+                "Export, contrôle et présentation",
+                "Dossier et vidéos remis"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Comment sera évalué le travail ?",
+          "lead": "Le cadre du support d’origine est conservé : 50 % de suivi et 50 % de rendu final.",
+          "items": [
+            {
+              "title": "50 % · ÉVALUATION CONTINUE",
+              "text": "Présenter le brief, les trames, les scripts et les avancées. Intégrer les retours entre deux étapes."
+            },
+            {
+              "title": "50 % · PRÉSENTATION FINALE",
+              "text": "Présenter le dossier et les trois vidéos, puis justifier les choix créatifs et techniques."
+            },
+            {
+              "title": "REGARD DES PAIRS",
+              "text": "Formuler un retour utile : un point fort, un point à améliorer, une suggestion concrète. La notation reste conduite par le formateur."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            9,
+            24,
+            74
+          ],
+          "takeaway": "Le barème du rendu final reste : message 6 points, créativité 8 points, qualité finale 6 points.",
+          "added": false
+        }
+      ]
+    },
+    {
+      "id": "strategie",
+      "title": "La stratégie de contenu",
+      "description": "Créer un contenu utile, pour une personne et une action précises.",
+      "slides": [
+        {
+          "title": "Attirer avec un contenu utile",
+          "lead": "Le content marketing consiste à proposer des contenus qui répondent aux besoins d’une audience.",
+          "items": [
+            {
+              "title": "EXPLIQUER",
+              "text": "Articles de blog, infographies, livres blancs et tutoriels."
+            },
+            {
+              "title": "MONTRER",
+              "text": "Photos, démonstrations, vidéos produit et études de cas."
+            },
+            {
+              "title": "FAIRE ENTENDRE",
+              "text": "Podcasts, interviews et témoignages : le son peut aussi porter une histoire."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            14,
+            15,
+            16
+          ],
+          "takeaway": "On choisit un format parce qu’il sert un besoin, pas parce qu’il est à la mode.",
+          "added": false
+        },
+        {
+          "title": "Atelier · Les contenus qui vous marquent",
+          "lead": "En groupe, rassemblez vos idées dans un FigJam ou un document partagé.",
+          "items": [
+            {
+              "title": "QUESTION 1",
+              "text": "Quels contenus pourraient attirer des prospects qualifiés sur le site d’une marque ?"
+            },
+            {
+              "title": "QUESTION 2",
+              "text": "Quel exemple récent vous a marqué ? Expliquez le message, l’émotion et l’action attendue."
+            },
+            {
+              "title": "À PRODUIRE",
+              "text": "Un tableau commun : format, besoin du public, idée de contenu et exemple. Chaque groupe partage ses choix."
+            }
+          ],
+          "kind": "atelier",
+          "source_pages": [
+            13
+          ],
+          "takeaway": "Un exemple devient utile quand vous savez expliquer pourquoi il fonctionne.",
+          "added": false
+        },
+        {
+          "title": "Pourquoi choisir la vidéo ?",
+          "lead": "Trois usages possibles, à relier à un objectif mesurable.",
+          "items": [
+            {
+              "title": "VISIBILITÉ",
+              "text": "Faire découvrir une marque ou une offre. Indicateur possible : vues qualifiées ou portée."
+            },
+            {
+              "title": "COMPRÉHENSION",
+              "text": "Rendre un fonctionnement ou un bénéfice plus concret. Indicateur possible : rétention ou questions reçues."
+            },
+            {
+              "title": "CONFIANCE",
+              "text": "Montrer une personne, un usage ou un retour d’expérience. Indicateur possible : clic vers une demande de démonstration."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            18,
+            19
+          ],
+          "takeaway": "Un chiffre ne devient une preuve que si sa source, sa date et son périmètre sont identifiables.",
+          "added": false
+        },
+        {
+          "title": "Un format, un rôle",
+          "lead": "La vidéo principale présente l’offre ; les compléments répondent à d’autres questions.",
+          "items": [
+            {
+              "title": "PRÉSENTATION PRODUIT",
+              "text": "Quel problème résout votre produit ou service, et pourquoi le choisir ?"
+            },
+            {
+              "title": "TÉMOIGNAGE / ÉTUDE DE CAS",
+              "text": "Comment un utilisateur vit-il le problème, puis le bénéfice ?"
+            },
+            {
+              "title": "TUTORIEL / INTERVIEW / ÉVÉNEMENT",
+              "text": "Comment utiliser le produit ? Qui le conçoit ? Dans quel contexte le découvrir ?"
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            20,
+            23,
+            35
+          ],
+          "takeaway": "Les trois vidéos doivent se compléter, plutôt que répéter le même argument.",
+          "added": false
+        },
+        {
+          "title": "Avant la caméra : le brief",
+          "lead": "Complétez cette phrase avant de chercher des idées de plans.",
+          "items": [
+            {
+              "title": "LA PHRASE À COMPLÉTER",
+              "text": "Nous voulons que [cible], confrontée à [problème], comprenne [bénéfice] et réalise [action], sur [canal]."
+            },
+            {
+              "title": "EXEMPLE PÉDAGOGIQUE",
+              "text": "Nous voulons que les étudiants qui peinent à organiser leurs révisions découvrent notre lampe de bureau avec minuteur et demandent une démonstration sur le site."
+            },
+            {
+              "title": "LE TEST",
+              "text": "Si la cible, le problème et l’action restent flous, retravaillez le brief avant le script."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [],
+          "takeaway": "Une cible identifiable + un message principal + une action attendue.",
+          "added": true
+        },
+        {
+          "title": "Analyser une inspiration",
+          "lead": "Regarder une vidéo ne suffit pas : identifiez une mécanique que vous pouvez adapter.",
+          "items": [
+            {
+              "title": "OBSERVER",
+              "text": "Accroche, durée, personnages, type de plans, place du son, preuve et appel à l’action."
+            },
+            {
+              "title": "INTERPRÉTER",
+              "text": "Qu’avez-vous compris ? Ressenti ? Quelle action semble attendue à la fin ?"
+            },
+            {
+              "title": "TRANSFÉRER",
+              "text": "Ce que nous gardons : un procédé. Ce que nous changeons : le produit, la cible, l’histoire et les plans."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            21,
+            22,
+            60,
+            61
+          ],
+          "takeaway": "Inspirez-vous d’un principe de narration ou de mise en scène ; construisez votre propre création.",
+          "added": false
+        }
+      ]
+    },
+    {
+      "id": "mission",
+      "title": "La mission et les livrables",
+      "description": "Un produit ou service existant, une équipe, trois vidéos cohérentes.",
+      "slides": [
+        {
+          "title": "Votre mission : convaincre avec trois vidéos",
+          "lead": "En groupe de six personnes maximum, concevez une présentation produit ou service et deux compléments.",
+          "items": [
+            {
+              "title": "VIDÉO PRINCIPALE",
+              "text": "Durée cible : 1 min 30. Destination prévue : la page d’accueil du site du produit."
+            },
+            {
+              "title": "DEUX COMPLÉMENTS",
+              "text": "Durée cible : 30 à 45 secondes chacun. Choisissez le format et le canal de chaque vidéo."
+            },
+            {
+              "title": "DOSSIER DE PROJET",
+              "text": "Brief, inspirations, trames, scripts/storyboards, planning et liens vers les trois vidéos."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            12,
+            23,
+            44,
+            51,
+            52,
+            71,
+            72
+          ],
+          "takeaway": "À remettre : trois vidéos + un dossier qui permet de comprendre leur conception.",
+          "added": false
+        },
+        {
+          "title": "Atelier · Constituer l’équipage",
+          "lead": "5 minutes · En groupe · Six personnes maximum.",
+          "items": [
+            {
+              "title": "COMPOSER",
+              "text": "Créez votre groupe et une slide d’identification dans le dossier partagé."
+            },
+            {
+              "title": "IDENTIFIER",
+              "text": "Indiquez les noms et prénoms des membres, dans l’ordre alphabétique."
+            },
+            {
+              "title": "PARTAGER LES RÔLES",
+              "text": "Coordination, script, image, son, interprétation et montage. Les rôles se cumulent et peuvent tourner."
+            }
+          ],
+          "kind": "atelier",
+          "source_pages": [
+            12
+          ],
+          "takeaway": "Les rôles répartissent la responsabilité ; chaque membre doit contribuer au projet.",
+          "added": false
+        },
+        {
+          "title": "Atelier · Choisir le produit ou le service",
+          "lead": "45 minutes · En groupe · Partez d’un objet ou d’un service existant.",
+          "items": [
+            {
+              "title": "DÉFINIR",
+              "text": "Décrivez le problème, la solution, les avantages et les caractéristiques de la cible."
+            },
+            {
+              "title": "CRÉER UN UNIVERS",
+              "text": "Précisez le ton, les couleurs, l’environnement et l’histoire du produit. Assemblez un moodboard."
+            },
+            {
+              "title": "CHERCHER DES RÉFÉRENCES",
+              "text": "Retenez une ou deux vidéos d’inspiration. Expliquez votre choix sans vous limiter à « c’est beau »."
+            }
+          ],
+          "kind": "atelier",
+          "source_pages": [
+            25
+          ],
+          "takeaway": "Livrable : une fiche produit avec histoire, univers et bénéfice distinctif. Restitution prévue : 5 minutes par groupe.",
+          "added": false
+        },
+        {
+          "title": "Organiser une production réaliste",
+          "lead": "Transformez vos contraintes en choix de mise en scène.",
+          "items": [
+            {
+              "title": "RESSOURCES",
+              "text": "Téléphone, micro ou écouteurs, trépied, lumière disponible, ordinateur et logiciel."
+            },
+            {
+              "title": "ÉQUIPE ET LIEUX",
+              "text": "Qui est disponible ? Qui parle ? Quel lieu est calme, accessible et utilisable pour le tournage ?"
+            },
+            {
+              "title": "PLANNING ET PLAN B",
+              "text": "Bloquez l’écriture, les tests, le tournage, le montage et l’export. Prévoyez un lieu intérieur si la météo change."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            8,
+            32,
+            36
+          ],
+          "takeaway": "Prévoir le son, le temps et les lieux dès le départ évite de découvrir un blocage au tournage.",
+          "added": true
+        }
+      ]
+    },
+    {
+      "id": "trame",
+      "title": "01 · La trame",
+      "description": "Choisir le message, l’émotion et le fil de l’histoire.",
+      "slides": [
+        {
+          "title": "La trame, c’est le squelette de la vidéo",
+          "lead": "Elle décrit les grandes parties, avant le détail des scènes.",
+          "items": [
+            {
+              "title": "EN AMONT",
+              "text": "Objectif, cible, message et canal. Puis matériel, temps, compétences et lieux disponibles."
+            },
+            {
+              "title": "DANS LA TRAME",
+              "text": "Ambiance, ton, personnages, moments clés et déroulé de l’histoire."
+            },
+            {
+              "title": "POUR LA VALIDER",
+              "text": "Peut-on raconter le projet à l’oral en quelques phrases ? Comprend-on ce que le public doit retenir ?"
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            26,
+            32,
+            36
+          ],
+          "takeaway": "Une trame n’est pas encore un script : elle organise les idées principales.",
+          "added": false
+        },
+        {
+          "title": "La présentation produit en cinq étapes",
+          "lead": "Le fil conducteur du projet principal.",
+          "items": [
+            {
+              "title": "01 · CONTEXTE",
+              "text": "Une accroche qui rejoint la situation de votre cible."
+            },
+            {
+              "title": "02 · PROBLÈME",
+              "text": "Un obstacle concret, reconnaissable et compréhensible."
+            },
+            {
+              "title": "03 · SOLUTION",
+              "text": "Le produit entre en scène : montrez comment il répond au problème."
+            },
+            {
+              "title": "04 · PREUVE",
+              "text": "Une démonstration, un usage ou un élément vérifiable soutient le bénéfice annoncé."
+            },
+            {
+              "title": "05 · APPEL À L’ACTION",
+              "text": "Une action claire : découvrir, essayer, demander une démonstration…"
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            33
+          ],
+          "takeaway": "Une promesse devient crédible quand la vidéo apporte une preuve adaptée.",
+          "added": false,
+          "diagram": "steps"
+        },
+        {
+          "title": "90 secondes : une répartition possible",
+          "lead": "Exemple de rythme, à adapter à votre concept ; ce n’est pas un chronomètre obligatoire.",
+          "items": [],
+          "kind": "cours",
+          "source_pages": [],
+          "takeaway": "Le produit doit arriver assez tôt pour que le spectateur comprenne le sujet.",
+          "added": true,
+          "table": {
+            "headers": [
+              "Temps indicatif",
+              "Partie",
+              "Ce que le spectateur comprend"
+            ],
+            "rows": [
+              [
+                "0–10 s",
+                "Contexte / accroche",
+                "Cette situation me concerne"
+              ],
+              [
+                "10–25 s",
+                "Problème",
+                "Voici ce qui bloque"
+              ],
+              [
+                "25–50 s",
+                "Solution",
+                "Voici comment cela fonctionne"
+              ],
+              [
+                "50–75 s",
+                "Preuve / bénéfice",
+                "Voici pourquoi cela peut m’aider"
+              ],
+              [
+                "75–90 s",
+                "Appel à l’action",
+                "Voici ce que je peux faire ensuite"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "L’histoire en quatre temps",
+          "lead": "Une structure narrative générale, différente de la trame commerciale en cinq étapes.",
+          "items": [
+            {
+              "title": "INTRODUCTION",
+              "text": "Planter le décor, éveiller la curiosité et créer une attente."
+            },
+            {
+              "title": "DÉVELOPPEMENT",
+              "text": "Faire avancer une situation et embarquer le spectateur."
+            },
+            {
+              "title": "MOMENT FORT",
+              "text": "Construire le point de bascule ou le sommet émotionnel."
+            },
+            {
+              "title": "DÉNOUEMENT",
+              "text": "Revenir au calme, conclure et laisser une impression."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            29,
+            30
+          ],
+          "takeaway": "Exemple du voyage : préparation → péripéties → rencontre marquante → retour et souvenir.",
+          "added": false,
+          "diagram": "arc"
+        },
+        {
+          "title": "Chaque plan doit avoir une intention",
+          "lead": "Avant de filmer, choisissez ce que vous voulez montrer et faire ressentir.",
+          "items": [
+            {
+              "title": "VARIER LES ÉCHELLES",
+              "text": "Situer avec un plan large ; montrer une action avec un plan moyen ; révéler une émotion avec un gros plan."
+            },
+            {
+              "title": "CHOISIR L’ÉMOTION",
+              "text": "Joie, surprise, nostalgie, tension… Le cadrage, la lumière, les couleurs et le son soutiennent cette intention."
+            },
+            {
+              "title": "PENSER AU MONTAGE",
+              "text": "Prévoyez des plans de coupe, plusieurs angles et du temps avant/après l’action. Alternez plans courts et moments de respiration."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            27,
+            28
+          ],
+          "takeaway": "Ne filmez pas seulement un objet : montrez ce que son usage change pour la personne.",
+          "added": false
+        },
+        {
+          "title": "Atelier · Présenter les trois trames",
+          "lead": "En groupe · Préparez une trame pour la vidéo principale et une pour chaque complément.",
+          "items": [
+            {
+              "title": "POUR CHAQUE VIDÉO",
+              "text": "Précisez objectif, cible, message, format, canal, ambiance et déroulé."
+            },
+            {
+              "title": "À DÉPOSER",
+              "text": "Un lien ou une capture de vos trois trames dans le dossier partagé."
+            },
+            {
+              "title": "VALIDATION",
+              "text": "Restitution prévue dans le support : 10 minutes par groupe. Le formateur ajuste l’organisation au nombre de groupes."
+            }
+          ],
+          "kind": "atelier",
+          "source_pages": [
+            35,
+            36,
+            37
+          ],
+          "takeaway": "Jalon : le message et le déroulé sont validés avant de détailler les scripts.",
+          "added": false
+        }
+      ]
+    },
+    {
+      "id": "script",
+      "title": "02 · Le script et le storyboard",
+      "description": "Passer d’une idée comprise à un tournage réalisable.",
+      "slides": [
+        {
+          "title": "Le script décrit ce qui se passe vraiment",
+          "lead": "Il précise le contenu de chaque séquence et permet de préparer l’équipe.",
+          "items": [
+            {
+              "title": "L’ACTION ET LA PAROLE",
+              "text": "Que fait le personnage ? Que dit-il ? Quelle voix off entend-on ? Quel texte apparaît à l’écran ?"
+            },
+            {
+              "title": "L’IMAGE ET LE LIEU",
+              "text": "Quel plan ? Quel angle ? Quel mouvement de caméra ? Quel décor, accessoire ou figurant ?"
+            },
+            {
+              "title": "LE SON ET LES RACCORDS",
+              "text": "Quelle ambiance, musique ou transition ? Comment passe-t-on au plan suivant ?"
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            38,
+            39,
+            40
+          ],
+          "takeaway": "Si une autre personne ne peut pas tourner la scène à partir du script, il manque une information.",
+          "added": false
+        },
+        {
+          "title": "Écrire pour être entendu",
+          "lead": "Le script sera joué ou lu : faites-le vivre à voix haute.",
+          "items": [
+            {
+              "title": "SIMPLIFIER",
+              "text": "Phrases courtes, vocabulaire accessible, une idée à la fois. Retirez répétitions et jargon."
+            },
+            {
+              "title": "PARLER NATURELLEMENT",
+              "text": "Adoptez une formulation orale, testez le débit et gardez les mots qui sonnent juste."
+            },
+            {
+              "title": "DONNER DU RELIEF",
+              "text": "Choisissez une émotion, une intention de voix et, si le sujet s’y prête, une touche d’humour."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            34,
+            41,
+            42
+          ],
+          "takeaway": "Lisez, chronométrez, coupez. Une phrase doit être facile à comprendre dès la première écoute.",
+          "added": false
+        },
+        {
+          "title": "Storyboard : un plan, une case",
+          "lead": "Un croquis simple vaut mieux qu’une scène impossible à imaginer.",
+          "items": [
+            {
+              "title": "CADRAGE",
+              "text": "Indiquez l’échelle du plan, l’angle de prise de vue et la position de la caméra."
+            },
+            {
+              "title": "SUJET ET DÉCOR",
+              "text": "Montrez le personnage ou l’objet, sa position, son action, l’arrière-plan et le premier plan utile."
+            },
+            {
+              "title": "MOUVEMENT ET SON",
+              "text": "Flèches pour les déplacements ou zooms ; texte associé pour les dialogues, la voix off et les sons."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            43
+          ],
+          "takeaway": "Pas besoin de bien dessiner : le storyboard est un outil de compréhension collective.",
+          "added": false
+        },
+        {
+          "title": "Une fiche de scène prête à utiliser",
+          "lead": "Dupliquez cette structure pour préparer votre tournage.",
+          "items": [],
+          "kind": "cours",
+          "source_pages": [],
+          "takeaway": "Ajoutez un numéro de prise sur votre feuille de tournage pour retrouver les bons fichiers.",
+          "added": true,
+          "table": {
+            "headers": [
+              "Champ",
+              "Exemple pédagogique"
+            ],
+            "rows": [
+              [
+                "Scène / durée",
+                "03 · 6 secondes"
+              ],
+              [
+                "Action / décor",
+                "L’étudiant active le minuteur sur son bureau"
+              ],
+              [
+                "Image / mouvement",
+                "Gros plan fixe sur la main, puis détail du témoin lumineux"
+              ],
+              [
+                "Parole / son",
+                "Voix off : « Un temps pour se concentrer. » + ambiance discrète"
+              ],
+              [
+                "Texte / transition",
+                "« 25 min » à l’écran ; coupe sur l’étudiant qui commence"
+              ],
+              [
+                "Organisation",
+                "Interprète, cadreur, son ; bureau, lampe, téléphone et support"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Exemples : ce qu’il faut retenir",
+          "lead": "Paw Box et Odile sont des exemples de construction, pas des preuves commerciales vérifiées.",
+          "items": [
+            {
+              "title": "PAW BOX · LA TRAME",
+              "text": "Situation de voyage → inquiétude pour l’animal → cage connectée → démonstration des fonctions → invitation à découvrir le produit."
+            },
+            {
+              "title": "ODILE · LE SCRIPT",
+              "text": "Alterner présentation des fondatrices, action, plans rapprochés, voix in et voix off. Préciser aussi les textes à l’écran."
+            },
+            {
+              "title": "À AMÉLIORER",
+              "text": "Remplacer une affirmation absolue (« aucune autre offre ») par un élément démontrable. Sourcer les chiffres avant de les réutiliser."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            49,
+            50
+          ],
+          "takeaway": "Vos affirmations doivent correspondre à ce que vous pouvez montrer ou documenter.",
+          "added": false
+        },
+        {
+          "title": "Atelier · Valider scripts et storyboards",
+          "lead": "En groupe · Un script final pour chacune des trois vidéos.",
+          "items": [
+            {
+              "title": "FORMAT",
+              "text": "Document texte, présentation ou croquis. Le format importe moins que la précision."
+            },
+            {
+              "title": "À REMETTRE",
+              "text": "Les scripts et storyboards, avec un lien ou une capture dans le dossier partagé."
+            },
+            {
+              "title": "POINT DE CONTRÔLE",
+              "text": "Message clair, scènes réalisables, durée plausible, voix et musique prévues. Présentation prévue : 10 minutes par groupe."
+            }
+          ],
+          "kind": "atelier",
+          "source_pages": [
+            44,
+            45
+          ],
+          "takeaway": "Jalon : le formateur peut comprendre le tournage prévu sans que vous le racontiez à sa place.",
+          "added": false
+        }
+      ]
+    },
+    {
+      "id": "tournage",
+      "title": "03 · Le tournage",
+      "description": "Tourner des images utilisables et enregistrer un son compréhensible.",
+      "slides": [
+        {
+          "title": "Les échelles de plan",
+          "lead": "Choisissez la quantité d’information à montrer.",
+          "items": [
+            {
+              "title": "PLAN LARGE / D’ENSEMBLE",
+              "text": "Situe l’action et l’environnement."
+            },
+            {
+              "title": "PLAN EN PIED",
+              "text": "Montre le personnage en entier et ses déplacements."
+            },
+            {
+              "title": "PLAN AMÉRICAIN",
+              "text": "Cadre le personnage vers la mi-cuisse."
+            },
+            {
+              "title": "PLAN RAPPROCHÉ / GROS PLAN",
+              "text": "Rapproche le spectateur d’une expression, d’un geste ou d’un détail important."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            54,
+            55,
+            56
+          ],
+          "takeaway": "L’échelle du plan décrit le cadrage ; le travelling décrit un mouvement de caméra.",
+          "added": false,
+          "diagram": "framing"
+        },
+        {
+          "title": "Angles, mouvements et composition",
+          "lead": "Le même sujet peut raconter des choses différentes selon votre point de vue.",
+          "items": [
+            {
+              "title": "PLONGÉE / CONTRE-PLONGÉE",
+              "text": "Caméra au-dessus / au-dessous du sujet. Leur effet dépend du contexte de la scène."
+            },
+            {
+              "title": "PLAN FIXE / TRAVELLING / PANORAMIQUE",
+              "text": "Caméra immobile ; caméra qui se déplace ; caméra qui pivote depuis un point fixe."
+            },
+            {
+              "title": "COMPOSITION",
+              "text": "Placez le sujet, surveillez les bords du cadre et l’arrière-plan. Utilisez la règle des tiers comme repère, pas comme obligation."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            28,
+            55,
+            57
+          ],
+          "takeaway": "Un mouvement doit aider à comprendre, révéler ou accompagner quelque chose.",
+          "added": false
+        },
+        {
+          "title": "Smartphone : préparer avant d’enregistrer",
+          "lead": "Une courte vérification évite de perdre une scène.",
+          "items": [
+            {
+              "title": "CADRE ET STABILITÉ",
+              "text": "Nettoyez l’objectif. Choisissez l’orientation prévue, le bon cadrage et un support stable."
+            },
+            {
+              "title": "IMAGE",
+              "text": "Vérifiez la mise au point et l’exposition. Évitez de changer de réglages sans raison entre deux prises."
+            },
+            {
+              "title": "TECHNIQUE",
+              "text": "Testez batterie, stockage, micro et lecture du fichier. Tournez quelques secondes, puis vérifiez sur ordinateur."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            57,
+            58
+          ],
+          "takeaway": "Faites un test complet image + son avant de tourner toute la vidéo.",
+          "added": true
+        },
+        {
+          "title": "Lumière : rendre le sujet lisible",
+          "lead": "Le spectateur doit pouvoir voir ce qui compte.",
+          "items": [
+            {
+              "title": "DIRECTION",
+              "text": "Placez le sujet pour recevoir une lumière utile. Surveillez contre-jour et ombres sur le visage."
+            },
+            {
+              "title": "COHÉRENCE",
+              "text": "Évitez les mélanges de lumières qui donnent des couleurs différentes à l’image."
+            },
+            {
+              "title": "CONTINUITÉ",
+              "text": "En lumière naturelle, surveillez nuages et baisse de luminosité. Recontrôlez après chaque changement de lieu."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            58
+          ],
+          "takeaway": "Déplacez le sujet ou la source avant de chercher à corriger l’image au montage.",
+          "added": false
+        },
+        {
+          "title": "Le son se prépare sur le tournage",
+          "lead": "Une belle image ne compense pas une voix impossible à comprendre.",
+          "items": [
+            {
+              "title": "PROXIMITÉ",
+              "text": "Placez le micro assez près de la bouche ; évitez les frottements sur les vêtements. Testez le branchement."
+            },
+            {
+              "title": "ENVIRONNEMENT",
+              "text": "Écoutez la pièce : ventilateur, circulation, réverbération… Choisissez un endroit plus calme si nécessaire."
+            },
+            {
+              "title": "CONTRÔLE",
+              "text": "Écoutez au casque. Contrôlez les niveaux et évitez la saturation. Enregistrez quelques secondes d’ambiance et faites un clap si le son est séparé."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            58
+          ],
+          "takeaway": "Le meilleur outil de correction du son reste une prise propre.",
+          "added": true
+        },
+        {
+          "title": "Être naturel devant la caméra",
+          "lead": "L’énergie du message passe aussi par la voix et le corps.",
+          "items": [
+            {
+              "title": "INTERPRÉTATION",
+              "text": "Souriez si l’intention le demande, même en voix off. Variez les intonations ; évitez la lecture monocorde."
+            },
+            {
+              "title": "PRÉSENCE",
+              "text": "Surveillez tics de langage, gestes parasites et vêtements. Adressez-vous à une personne plutôt qu’à un objectif."
+            },
+            {
+              "title": "MARGES DE MONTAGE",
+              "text": "Laissez du silence avant et après l’action. Ne coupez pas immédiatement après la dernière syllabe."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            59
+          ],
+          "takeaway": "Préférez une prise claire et vivante à un texte récité mot à mot sans intention.",
+          "added": false
+        },
+        {
+          "title": "Atelier · Tester puis tourner",
+          "lead": "En groupe · Une première session de prises est prévue sur une heure dans le support.",
+          "items": [
+            {
+              "title": "AVANT",
+              "text": "Relisez le script, listez les plans et vérifiez le matériel, le son et la lumière."
+            },
+            {
+              "title": "PENDANT",
+              "text": "Tournez plusieurs prises utiles, des plans de coupe et les voix nécessaires. Notez les prises à conserver."
+            },
+            {
+              "title": "APRÈS",
+              "text": "Copiez les fichiers, écoutez et regardez les prises. Repérez immédiatement ce qu’il faut retourner."
+            }
+          ],
+          "kind": "atelier",
+          "source_pages": [
+            61,
+            62
+          ],
+          "takeaway": "Preuve à déposer : un lien vers les rushes ou une courte sélection, pas une nouvelle capture de la trame.",
+          "added": false
+        }
+      ]
+    },
+    {
+      "id": "audio",
+      "title": "Le son et la musique",
+      "description": "Donner une vraie place à l’audio dans un cours audio & vidéo.",
+      "slides": [
+        {
+          "title": "Trois couches pour raconter avec le son",
+          "lead": "Vous n’avez pas besoin de tout utiliser : chaque couche doit avoir un rôle.",
+          "items": [
+            {
+              "title": "LA VOIX",
+              "text": "Porte le message principal : dialogue, interview ou voix off."
+            },
+            {
+              "title": "LES AMBIANCES ET BRUITAGES",
+              "text": "Situent le lieu, rendent une action concrète et renforcent la continuité."
+            },
+            {
+              "title": "LA MUSIQUE",
+              "text": "Soutient le rythme et l’émotion sans concurrencer la parole. Le silence est aussi un choix."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [],
+          "takeaway": "Le spectateur doit pouvoir suivre le message sans lutter pour entendre la voix.",
+          "added": true,
+          "diagram": "tracks"
+        },
+        {
+          "title": "Enregistrer une voix off en quatre étapes",
+          "lead": "Un complément à la voix in, enregistrée pendant l’action.",
+          "items": [
+            {
+              "title": "1 · PRÉPARER",
+              "text": "Écrivez un texte oral, marquez les pauses et chronométrez une lecture."
+            },
+            {
+              "title": "2 · INSTALLER",
+              "text": "Choisissez un endroit calme et peu réverbérant ; gardez une distance régulière au micro."
+            },
+            {
+              "title": "3 · ENREGISTRER",
+              "text": "Faites un test, puis plusieurs prises. Gardez une intention et quelques secondes de marge."
+            },
+            {
+              "title": "4 · SÉLECTIONNER",
+              "text": "Écoutez les prises au casque et retenez la plus compréhensible, avant tout traitement."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [],
+          "takeaway": "La voix off doit compléter l’image ; elle n’a pas besoin de décrire chaque geste visible.",
+          "added": true
+        },
+        {
+          "title": "Choisir une musique utilisable",
+          "lead": "Une musique trouvée sur Internet n’est pas automatiquement réutilisable.",
+          "items": [
+            {
+              "title": "UNE SOURCE IDENTIFIÉE",
+              "text": "Utilisez une bibliothèque dont les conditions couvrent votre usage, par exemple la bibliothèque audio de YouTube ou une licence adaptée."
+            },
+            {
+              "title": "DES CONDITIONS LUES",
+              "text": "Vérifiez attribution, canaux de diffusion et conditions de la piste choisie. Conservez le lien et la preuve de licence."
+            },
+            {
+              "title": "UNE INTENTION",
+              "text": "Écoutez introduction, montée, moment fort et fin. Choisissez une structure qui accompagne l’histoire."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            31
+          ],
+          "takeaway": "Convertir une vidéo YouTube en fichier audio ne donne pas l’autorisation de réutiliser sa musique.",
+          "added": true
+        },
+        {
+          "title": "Mixer : la voix reste au premier plan",
+          "lead": "Réglez les couches ensemble, pas chacune à volume maximal.",
+          "items": [
+            {
+              "title": "NETTOYER ET ÉQUILIBRER",
+              "text": "Retirez les silences inutiles et harmonisez les différences de niveau entre prises."
+            },
+            {
+              "title": "FAIRE DE LA PLACE",
+              "text": "Baissez la musique pendant la parole, manuellement ou avec le ducking du panneau Audio essentiel."
+            },
+            {
+              "title": "ÉCOUTER LE RÉSULTAT",
+              "text": "Contrôlez au casque puis sur des haut-parleurs. Aucun traitement ne doit rendre la voix artificielle ou moins claire."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [],
+          "takeaway": "Dans Premiere, attribuez les types Dialogue et Musique avant d’utiliser le ducking.",
+          "added": true
+        }
+      ]
+    },
+    {
+      "id": "montage",
+      "title": "04 · Le montage",
+      "description": "Assembler une histoire lisible plutôt qu’une collection d’effets.",
+      "slides": [
+        {
+          "title": "Commencer un projet Premiere",
+          "lead": "L’interface varie selon la version ; retenez les fonctions essentielles.",
+          "items": [
+            {
+              "title": "PROJET ET MÉDIAS",
+              "text": "Créez le projet, choisissez où le sauvegarder et importez les rushes. Rangez-les en chutiers."
+            },
+            {
+              "title": "SÉQUENCE ET TIMELINE",
+              "text": "Créez une séquence adaptée à votre format. La timeline assemble l’image, le son et les titres."
+            },
+            {
+              "title": "MONITEUR ET RÉGLAGES",
+              "text": "Le moniteur affiche le résultat ; les panneaux Effets et Options d’effets servent à régler les clips sélectionnés."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            63,
+            64,
+            65,
+            66
+          ],
+          "takeaway": "Ne décochez pas des options au hasard : comprenez ce que vous importez et où vos fichiers sont stockés.",
+          "added": false
+        },
+        {
+          "title": "Des fichiers faciles à retrouver",
+          "lead": "Une organisation simple fait gagner du temps pendant tout le projet.",
+          "items": [
+            {
+              "title": "DOSSIERS",
+              "text": "01_Rushes · 02_Audio · 03_Visuels · 04_Projet · 05_Exports."
+            },
+            {
+              "title": "NOMS",
+              "text": "Groupe03_scene02_prise03.mp4 ; Groupe03_principale_v02.mp4. Évitez « final_final_bis ». "
+            },
+            {
+              "title": "SAUVEGARDE",
+              "text": "Conservez une copie des sources et du projet. Vérifiez qu’un déplacement de dossier ne casse pas les liens vers les médias."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [],
+          "takeaway": "Le fichier de projet ne contient pas nécessairement tous les rushes : gardez les sources avec lui.",
+          "added": true
+        },
+        {
+          "title": "Monter dans le bon ordre",
+          "lead": "Commencez par le sens, puis améliorez la forme.",
+          "items": [
+            {
+              "title": "1 · DÉRUSHER",
+              "text": "Écartez les erreurs, blancs et répétitions. Sélectionnez les prises qui servent le script."
+            },
+            {
+              "title": "2 · ASSEMBLER",
+              "text": "Construisez une première version compréhensible. Synchronisez image et son si nécessaire."
+            },
+            {
+              "title": "3 · AFFINER",
+              "text": "Resserrez le rythme, harmonisez son et couleurs, ajoutez titres utiles, musique et transitions."
+            },
+            {
+              "title": "4 · CONTRÔLER",
+              "text": "Regardez sans interrompre. Demandez à une autre personne ce qu’elle a compris."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            68,
+            69
+          ],
+          "takeaway": "Si une intention est trop difficile à réaliser, simplifiez la mise en scène sans perdre le message.",
+          "added": false
+        },
+        {
+          "title": "Effets, transitions et couleur",
+          "lead": "Les outils restent au service du propos.",
+          "items": [
+            {
+              "title": "TRANSITIONS",
+              "text": "La coupe simple suffit souvent. Préparez les raccords dès le tournage pour éviter les effets décoratifs."
+            },
+            {
+              "title": "COULEUR",
+              "text": "Corrigez d’abord les différences gênantes entre plans. Un calque d’effets peut regrouper un traitement commun."
+            },
+            {
+              "title": "OPTIONS CRÉATIVES",
+              "text": "Ralenti, zoom, fond vert/Ultra Key : utilisez-les si la prise le permet et si cela aide le projet."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            40,
+            68,
+            69
+          ],
+          "takeaway": "Pas de surcharge : le spectateur doit suivre le produit et l’histoire.",
+          "added": false
+        },
+        {
+          "title": "Atelier individuel · La publicité de 15 secondes",
+          "lead": "60 minutes · Votre téléphone + Premiere · Un accessoire que vous avez sur vous.",
+          "items": [
+            {
+              "title": "TOURNER",
+              "text": "Au moins quatre prises et des cadrages variés : large, détail, fixe et mouvement utile."
+            },
+            {
+              "title": "SOCLE À MONTER",
+              "text": "Une accroche textuelle, un assemblage compréhensible, un son cohérent, des couleurs raccordées et un écran final."
+            },
+            {
+              "title": "SI LE SOCLE EST RÉUSSI",
+              "text": "Ajoutez une voix off, un ralenti, un zoom ou une transition travaillée. Ne sacrifiez pas le message pour tout cumuler."
+            }
+          ],
+          "kind": "atelier",
+          "source_pages": [
+            70
+          ],
+          "takeaway": "Livrable : une vidéo de 15 secondes, déposée sur Drive avec nom/prénom et lien de lecture dans le dossier partagé.",
+          "added": false
+        },
+        {
+          "title": "Atelier · Finaliser les trois vidéos",
+          "lead": "En groupe · Repartez du brief, des trames et des scripts validés.",
+          "items": [
+            {
+              "title": "VERSION 1",
+              "text": "Montez d’abord la vidéo principale, puis les deux compléments. Vérifiez leur complémentarité."
+            },
+            {
+              "title": "RETOUR CROISÉ",
+              "text": "Montrez vos versions à un autre groupe : message retenu, preuve comprise, action attendue."
+            },
+            {
+              "title": "VERSION 2",
+              "text": "Corrigez les problèmes les plus gênants : message confus, son faible, longueur, texte illisible ou transition maladroite."
+            }
+          ],
+          "kind": "atelier",
+          "source_pages": [
+            67,
+            68,
+            69,
+            71,
+            72
+          ],
+          "takeaway": "Trois vidéos cohérentes valent mieux qu’une vidéo très finie et deux compléments oubliés.",
+          "added": false
+        }
+      ]
+    },
+    {
+      "id": "diffusion",
+      "title": "05 · Exporter et partager",
+      "description": "La vidéo n’est terminée que lorsque le destinataire peut la lire.",
+      "slides": [
+        {
+          "title": "Adapter le format au canal",
+          "lead": "Décidez du cadrage avant de filmer ; recadrer à la fin peut faire disparaître le sujet.",
+          "items": [
+            {
+              "title": "SITE / VIDÉO HORIZONTALE",
+              "text": "Repère de production pour la vidéo principale : 16:9, par exemple 1920 × 1080 pixels."
+            },
+            {
+              "title": "CONTENU VERTICAL",
+              "text": "Pour un complément prévu en vertical : 9:16, par exemple 1080 × 1920 pixels. Vérifiez les contraintes du canal choisi."
+            },
+            {
+              "title": "CONTINUITÉ",
+              "text": "Conservez une fréquence d’images cohérente avec vos rushes et contrôlez la lisibilité des textes sur le téléphone."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [],
+          "takeaway": "Ces dimensions sont des repères de travail du cours, pas des obligations universelles de toutes les plateformes.",
+          "added": true,
+          "diagram": "formats"
+        },
+        {
+          "title": "Exporter dans Premiere",
+          "lead": "Un point de départ simple : MP4 en H.264, puis un contrôle attentif.",
+          "items": [
+            {
+              "title": "1 · CHOISIR",
+              "text": "Sélectionnez la bonne séquence, puis Fichier → Exportation → Média. Indiquez le nom et le dossier de sortie."
+            },
+            {
+              "title": "2 · VÉRIFIER",
+              "text": "Format H.264 ; préréglage adapté ou correspondant à la source. Contrôlez dimensions, fréquence d’images et présence de l’audio."
+            },
+            {
+              "title": "3 · EXPORTER ET RELIRE",
+              "text": "Exportez, puis ouvrez le fichier terminé hors de Premiere. Vérifiez l’intégralité de l’image, du son et de la durée."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [],
+          "takeaway": "Un fichier exporté n’est pas validé tant que vous ne l’avez pas regardé du début à la fin.",
+          "added": true
+        },
+        {
+          "title": "Des sous-titres qui aident vraiment",
+          "lead": "Ils rendent la parole lisible, notamment lorsque le son ne peut pas être écouté.",
+          "items": [
+            {
+              "title": "TRANSCRIRE ET RELIRE",
+              "text": "Corrigez les noms, chiffres, accords et termes métier. Une transcription automatique reste un brouillon."
+            },
+            {
+              "title": "SYNCHRONISER",
+              "text": "Respectez le rythme de la parole. Découpez le texte en unités faciles à lire."
+            },
+            {
+              "title": "LIVRER",
+              "text": "Selon la destination, utilisez une piste activable ou un fichier SRT ; incrustez les sous-titres si le canal l’exige."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [],
+          "takeaway": "Vérifiez contraste, taille et placement sur petit écran. N’utilisez pas uniquement la couleur pour porter une information.",
+          "added": true
+        },
+        {
+          "title": "Partager sans publier par erreur",
+          "lead": "Choisissez volontairement qui peut voir le rendu.",
+          "items": [
+            {
+              "title": "YOUTUBE",
+              "text": "Public : découvrable. Non répertorié : visible et repartageable par toute personne ayant le lien. Privé : accès limité aux personnes choisies."
+            },
+            {
+              "title": "DRIVE",
+              "text": "Réglez le partage pour permettre au formateur de lire le fichier. Évitez l’accès en modification si la lecture suffit."
+            },
+            {
+              "title": "AVANT LA DIFFUSION",
+              "text": "Vérifiez les accords des personnes filmées, l’usage des lieux et les autorisations des médias intégrés. En cas de doute, demandez au formateur."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [],
+          "takeaway": "Non répertorié ne veut pas dire confidentiel. Testez le lien avec le niveau d’accès réellement attendu.",
+          "added": true
+        },
+        {
+          "title": "La checklist avant remise",
+          "lead": "Le contrôle final se fait sur les fichiers exportés.",
+          "items": [
+            {
+              "title": "MESSAGE",
+              "text": "Sujet compris rapidement ; bénéfice identifiable ; preuve crédible ; appel à l’action explicite."
+            },
+            {
+              "title": "IMAGE ET SON",
+              "text": "Plans lisibles et stables ; voix compréhensible ; musique équilibrée ; aucun passage manquant."
+            },
+            {
+              "title": "LIVRAISON",
+              "text": "Trois fichiers, durées ciblées, sous-titres relus, crédits utiles, liens accessibles et dossier complet."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [],
+          "takeaway": "Demandez à une personne extérieure au groupe de tester les vidéos et les liens avant la présentation.",
+          "added": true
+        }
+      ]
+    },
+    {
+      "id": "evaluation",
+      "title": "Présenter et évaluer",
+      "description": "Montrer le résultat et expliquer le chemin qui y mène.",
+      "slides": [
+        {
+          "title": "Un dossier qui raconte le projet",
+          "lead": "Gardez une progression simple, avec des titres et une numérotation cohérents.",
+          "items": [
+            {
+              "title": "1 → 3 · CADRER",
+              "text": "1. Équipe et produit · 2. Cible, problème, objectif et univers · 3. Inspirations commentées."
+            },
+            {
+              "title": "4 → 6 · CONCEVOIR",
+              "text": "4. Trame principale · 5. Script et storyboard principal · 6. Objectifs, trames et scripts des compléments."
+            },
+            {
+              "title": "7 → 8 · LIVRER",
+              "text": "7. Liens des trois vidéos · 8. Choix créatifs, difficultés, solutions et bilan."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52
+          ],
+          "takeaway": "Le dossier doit permettre de retrouver rapidement les vidéos et les éléments de préparation.",
+          "added": false
+        },
+        {
+          "title": "Le barème final sur 20 points",
+          "lead": "Les pondérations d’origine sont conservées ; les attentes sont rendues plus concrètes.",
+          "items": [
+            {
+              "title": "6 POINTS · MESSAGE",
+              "text": "Structure compréhensible, bénéfice clair, cible identifiable, preuve et action cohérentes."
+            },
+            {
+              "title": "8 POINTS · CRÉATIVITÉ",
+              "text": "Concept, narration, mise en scène et cohérence de l’univers. Les choix servent le fond."
+            },
+            {
+              "title": "6 POINTS · QUALITÉ FINALE",
+              "text": "Image et son exploitables, montage lisible, textes et sous-titres soignés, fichiers et liens utilisables."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            24,
+            44,
+            74
+          ],
+          "takeaway": "Une introduction originale et convaincante valorise le message et la créativité ; le total reste sur 20.",
+          "added": false
+        },
+        {
+          "title": "Présenter, écouter, progresser",
+          "lead": "La projection est suivie d’un échange sur vos choix.",
+          "items": [
+            {
+              "title": "PRÉSENTER",
+              "text": "Rappelez la cible et l’objectif, montrez les vidéos puis expliquez un choix fort et une difficulté résolue."
+            },
+            {
+              "title": "DONNER UN RETOUR",
+              "text": "« J’ai compris… », « ce qui fonctionne… », « je suggère… ». Appuyez-vous sur un passage précis."
+            },
+            {
+              "title": "FAIRE LE BILAN",
+              "text": "Que changeriez-vous avec une heure de plus ? Quelle méthode réutiliserez-vous dans un projet professionnel ?"
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            74,
+            76
+          ],
+          "takeaway": "La créativité se défend avec une intention et des choix observables, pas seulement avec un goût personnel.",
+          "added": false
+        },
+        {
+          "title": "À l’abordage !",
+          "lead": "Les ressources du support et les références des compléments sont regroupées ci-dessous.",
+          "items": [
+            {
+              "title": "POUR CONTINUER",
+              "text": "Retrouvez les inspirations vidéo, les outils Pilot’in et les liens de satisfaction du PDF."
+            },
+            {
+              "title": "POUR VÉRIFIER",
+              "text": "Les compléments techniques renvoient à Adobe et à l’aide YouTube. Les écrans et intitulés peuvent évoluer."
+            },
+            {
+              "title": "POUR RETROUVER",
+              "text": "Les 77 diapositives originales restent disponibles dans une galerie séparée, y compris les exemples visuels."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            75,
+            76,
+            77
+          ],
+          "takeaway": "Votre meilleur prochain exercice : refaire une courte vidéo en appliquant un seul retour à la fois.",
+          "added": false
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Exporter un fichier vidéo et audio · Adobe",
+      "url": "https://helpx.adobe.com/premiere/desktop/render-and-export/export-files/export-video-and-audio-files.html"
+    },
+    {
+      "title": "Réglages d’export et sous-titres · Adobe",
+      "url": "https://helpx.adobe.com/premiere/desktop/render-and-export/export-files/overview-of-export-settings.html"
+    },
+    {
+      "title": "Ducking audio · Adobe",
+      "url": "https://helpx.adobe.com/premiere/desktop/add-audio-effects/adjust-volume-and-levels/automatically-duck-audio.html"
+    },
+    {
+      "title": "Bibliothèque audio · YouTube",
+      "url": "https://support.google.com/youtube/answer/3376882?hl=fr"
+    },
+    {
+      "title": "Visibilité des vidéos · YouTube",
+      "url": "https://support.google.com/youtube/answer/157177?hl=fr"
+    },
+    {
+      "title": "Définition du plan américain · OQLF",
+      "url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8885396/plan-americain"
+    }
+  ]
+}

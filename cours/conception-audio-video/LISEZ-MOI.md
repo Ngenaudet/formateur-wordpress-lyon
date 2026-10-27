@@ -1,19 +1,21 @@
-# Cours Conception audio & vidéo
+# Conception audio & vidéo — version enrichie
 
-Ouvrir index.html dans un navigateur. La page fonctionne sans connexion et sans dépendances externes ; les liens de ressources nécessitent Internet.
+53 slides en dix chapitres, dont 17 compléments. Les 77 diapositives originales sont conservées comme archives.
 
-## Contenu
-- index.html : contenu du cours, modifiable dans un éditeur HTML.
-- style.css : présentation et mise en page mobile/impression.
-- app.js : recherche, navigation active, impression.
-- assets/ : 77 diapositives originales en images.
-- contenu-source.json : transcription du texte extractible, liens et numéros des 77 pages, pour de futures migrations. Les textes incorporés dans les images sont conservés visuellement et les principales infographies ont également une transcription dans la page.
+## Mettre à jour
 
-Les doublons et intercalaires sont regroupés dans la lecture principale et tous conservés dans les originaux. Les corrections de mise en forme ne constituent pas une actualisation pédagogique. Les chiffres et exemples du PDF ne sont pas vérifiés. Les liens ne sont pas testés auprès des services externes.
+Dans le dépôt, modifier `slides.json`, puis lancer `python3 scripts/build-course.py` depuis la racine. Ce script génère `index.html`. Les schémas sont éditables dans `scripts/course_visuals.py` ; les styles et interactions dans `style.css` et `app.js`.
 
-## Intégration WordPress
-Cette livraison est une page autonome préparatoire. Une protection par code partagé est ajoutée via PHP et `.htaccess`, sans compte étudiant. Pour l’intégration définitive, transférer le contenu dans une page WordPress ou un modèle de cours et charger style.css/app.js avec le thème ou une extension adaptée. Éviter de coller un document HTML complet dans le bloc HTML de WordPress.
+`contenu-source.json` reste la transcription du PDF d’origine et ne doit pas être confondu avec le contenu révisé.
 
-Protéger la page ET les ressources du cours côté serveur avec le futur espace membres ; une image stockée dans les médias publics WordPress reste accessible par son URL même si la page est protégée. La balise noindex n’est pas un contrôle d’accès.
+## Présenter
 
-La page est ajoutée au dépôt dans cours/conception-audio-video/. Son URL après déploiement sera /cours/conception-audio-video/. La protection par code prendra effet après déploiement des fichiers PHP et du fichier caché `.htaccess`.
+Le bouton « Lire en diaporama » affiche une slide à la fois. Les flèches gauche/droite et Page précédente/suivante changent de slide ; Début/Fin vont aux extrémités ; Échap ferme le diaporama. Sur petit écran, les slides longues restent défilables.
+
+L’impression produit une version des slides sans la navigation et les archives.
+
+## Déployer
+
+Déployer tout le dossier, y compris le fichier caché `.htaccess`. PHP et les règles Apache protègent la page et ses ressources. Les JSON de travail et ce fichier ne sont pas servis par le contrôleur. Le code d’accès existant est conservé.
+
+Voir l’audit complet dans `audits/audit-conception-audio-video-2026-10-27.md` à la racine du dépôt. Les points d’organisation dépendant de la classe restent à confirmer par le formateur.

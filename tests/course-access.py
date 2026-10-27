@@ -38,6 +38,7 @@ assert request('assets/diapo-01.jpg', cookie=False)[0] == 403
 assert request('index.html', cookie=False)[2].find(b'name="code"') >= 0
 assert request('access-config.php')[0] == 404
 assert request('contenu-source.json')[0] == 404
+assert request('slides.json')[0] == 404
 assert request('LISEZ-MOI.md')[0] == 404
 assert request('../index.html')[0] == 404
 assert request(method='POST', data={'csrf': 'wrong', 'code': code})[0] == 403
