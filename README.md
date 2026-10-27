@@ -61,3 +61,10 @@ python3 scripts/build-blog.py
 Le script reprend le menu de l’accueil et génère les articles, le sommaire, les métadonnées et les données structurées Article, Person et FAQPage (HowTo pour le tutoriel Claude Design). Les consignes de visuels et de balisage fournies dans les textes restent dans les sources, sans être affichées aux lecteurs. Les portraits et captures n’ont pas encore été fournis. Les affirmations et retours d’expérience des textes ChatSEO doivent être relus par l’auteur avant mise en ligne.
 
 Pour ajouter un article, créer sa source Markdown et compléter `POSTS` dans `scripts/build-blog.py`. Le générateur ajoute les URL au sitemap, et `scripts/build-seo.mjs` reprend automatiquement les sources du blog. Les FAQ sont reconnues sous forme de titres H3 ou de questions en gras ; les réponses du balisage reprennent le texte visible. Le comparatif des assistants SEO comprend aussi une liste structurée des cinq outils.
+
+
+## Supports de cours
+
+Le cours INSEEC « Conception audio & vidéo » (18 heures, MSc2 MCSC) est accessible à `/cours/conception-audio-video/` après déploiement du dépôt. Le dossier contient une page autonome avec styles et scripts locaux, les 77 diapositives originales et une transcription source JSON. Aucun outil de compilation n’est nécessaire.
+
+Le cours reste absent du menu public et du sitemap. La balise `noindex,nofollow` limite son indexation ; la protection par code n’est pas encore mise en place.
