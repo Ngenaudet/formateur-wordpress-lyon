@@ -79,7 +79,7 @@ Test local : lancer le serveur PHP avec `php -S 127.0.0.1:8766 cours/conception-
 
 ### Version pédagogique enrichie du 27 octobre 2026
 
-53 slides révisées réparties en dix chapitres, dont 17 compléments pédagogiques. Palette inspirée du support original (bleu, lavande, corail), ateliers dédiés, cinq schémas éditables, recherche et diaporama avec flèches clavier / Échap. Les 77 images originales restent dans les archives du cours.
+57 slides révisées réparties en dix chapitres, dont 17 compléments pédagogiques. Palette inspirée du support original (bleu, lavande, corail), ateliers dédiés, cinq schémas éditables, recherche et diaporama avec flèches clavier / Échap. Les 77 images originales restent dans les archives du cours.
 
 Modifier `cours/conception-audio-video/slides.json`, puis lancer `python3 scripts/build-course.py`. Les schémas se trouvent dans `scripts/course_visuals.py`. Vérifier avec `python3 tests/course-content.py` et `node --check cours/conception-audio-video/app.js`.
 

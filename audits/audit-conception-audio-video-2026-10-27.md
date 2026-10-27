@@ -97,3 +97,7 @@ La protection PHP existante est conservée. Le nouveau JSON reste non accessible
 - Recherche : résultats sur « voix off », absence de résultats et retour au cours complet vérifiés.
 - Protection : connexion correcte, erreur de code, blocage des images non authentifiées, refus des JSON de travail, protection CSRF et limite de tentatives vérifiés localement.
 - Les anciens liens externes et les configurations de chaque appareil étudiant n’ont pas été testés exhaustivement. L’activation en production nécessite le déploiement sur o2switch.
+
+## Ajustement après retour du formateur
+
+La présentation personnelle est réintégrée dans le parcours principal : portrait et biographie, questions des trois anecdotes, réponses, souvenirs sportifs et tour de table. La version comprend désormais 57 slides. La règle du quiz est précisée : une réponse par anecdote. Les en-têtes du cours affichent INSEEC ; la mention de provenance et les archives du PDF restent inchangées.

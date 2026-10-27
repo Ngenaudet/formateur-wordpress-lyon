@@ -1,6 +1,6 @@
 # Conception audio & vidéo — version enrichie
 
-53 slides en dix chapitres, dont 17 compléments. Les 77 diapositives originales sont conservées comme archives.
+57 slides en dix chapitres, dont 17 compléments. Les 77 diapositives originales sont conservées comme archives.
 
 ## Mettre à jour
 

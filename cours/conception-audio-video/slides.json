@@ -33,32 +33,130 @@
           "added": false
         },
         {
-          "title": "Votre équipage, votre formateur",
-          "lead": "Nicolas Genaudet · Formateur et intégrateur web, passionné de WordPress.",
+          "title": "Votre formateur · Nicolas Genaudet",
+          "lead": "Formateur WordPress et intégrateur web, passionné depuis de nombreuses années.",
           "items": [
             {
-              "title": "LE TOUR DE TABLE",
-              "text": "Présentez-vous : votre expérience en audio/vidéo, un contenu qui vous inspire et votre attente principale."
+              "title": "CÔTÉ GOURMANDISE",
+              "text": "Mon gâteau préféré : la tarte au citron meringuée 🍋."
             },
             {
-              "title": "LE BRISE-GLACE",
-              "text": "24 h de triathlon, un koala photographié et le tour du Mont-Blanc en randonnée : trois anecdotes pour faire connaissance."
+              "title": "CÔTÉ ASTRO",
+              "text": "Poisson · Ascendant Gémeaux · Lune en Sagittaire."
             },
             {
-              "title": "LE CADRE",
-              "text": "Participation, respect des personnes, présence et critiques constructives. On critique un choix créatif, jamais une personne."
+              "title": "CÔTÉ SPORT",
+              "text": "Objectif annoncé dans le support : Ironman Nice 2026."
+            },
+            {
+              "title": "POUR ÉCHANGER",
+              "text": "genaudet.nicolas@gmail.com · Retrouvez aussi mon profil LinkedIn dans les ressources."
             }
           ],
           "kind": "cours",
           "source_pages": [
-            2,
-            3,
-            4,
-            5,
+            2
+          ],
+          "takeaway": "Votre marin formateur pour ces 18 heures de conception audio & vidéo.",
+          "added": false,
+          "portrait": true
+        },
+        {
+          "title": "Trois anecdotes · À vous de deviner !",
+          "lead": "Pour chaque anecdote, choisissez une réponse. Les réponses arrivent sur la slide suivante.",
+          "items": [
+            {
+              "title": "TRIATHLON",
+              "text": "J’ai déjà fait combien d’heures de triathlon ? 18 h · 24 h · 48 h."
+            },
+            {
+              "title": "KOALA",
+              "text": "J’ai déjà… câliné un koala · pris un koala en photo · dansé avec un koala."
+            },
+            {
+              "title": "MONT-BLANC",
+              "text": "J’ai déjà… gravi le Mont-Blanc · fait son tour en randonnée · seulement pris le Mont-Blanc en photo."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            3
+          ],
+          "takeaway": "Une réponse à choisir pour chaque anecdote : faites vos pronostics !",
+          "added": false
+        },
+        {
+          "title": "Les réponses · Vous me connaissez mieux !",
+          "lead": "Du sport, un peu d’aventure et une rencontre photographique.",
+          "items": [
+            {
+              "title": "24 HEURES DE TRIATHLON",
+              "text": "Oui, une épreuve qui dure toute une journée !"
+            },
+            {
+              "title": "UN KOALA PHOTOGRAPHIÉ",
+              "text": "Je l’ai pris en photo ; je ne l’ai pas câliné."
+            },
+            {
+              "title": "LE TOUR DU MONT-BLANC",
+              "text": "J’en ai fait le tour en randonnée. L’ascension était un peu trop vertigineuse pour moi."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            4
+          ],
+          "takeaway": "Maintenant, à vous de partager une anecdote pour faire connaissance.",
+          "added": false
+        },
+        {
+          "title": "Côté sport · Mes petits records personnels",
+          "lead": "Quelques faits d’armes et souvenirs de terrain.",
+          "items": [
+            {
+              "title": "3 · MONT VENTOUX",
+              "text": "Le défi des trois montées en une journée."
+            },
+            {
+              "title": "3 h 49 · MARATHON DE PARIS",
+              "text": "Le temps présenté dans mon support."
+            },
+            {
+              "title": "3 169 m · LES ÉCRINS",
+              "text": "Randonnée jusqu’au refuge Adèle Planchard."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
+            5
+          ],
+          "takeaway": "Et aussi : La Gobik à Montélimar, parmi les souvenirs sportifs du support.",
+          "added": false,
+          "records": true
+        },
+        {
+          "title": "Tour de table · À vous de vous présenter",
+          "lead": "Un temps pour découvrir l’équipage et poser un cadre commun.",
+          "items": [
+            {
+              "title": "VOTRE POINT DE DÉPART",
+              "text": "Où en êtes-vous sur les sujets de l’audio et de la vidéo ?"
+            },
+            {
+              "title": "VOTRE ATTENTE",
+              "text": "En quoi cette formation peut-elle être utile dans votre métier ou vos projets ?"
+            },
+            {
+              "title": "NOTRE CADRE",
+              "text": "Présence, respect, participation et critiques constructives. On commente un choix ou une réalisation, jamais une personne."
+            }
+          ],
+          "kind": "cours",
+          "source_pages": [
             6,
             10
           ],
-          "takeaway": "Votre expérience de départ compte moins que votre capacité à tester et à progresser.",
+          "takeaway": "Chacun arrive avec une expérience différente : partageons-la pour avancer ensemble.",
           "added": false
         },
         {
