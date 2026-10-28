@@ -113,6 +113,9 @@ $allowed = ['index.html' => 'text/html; charset=UTF-8',
 if (preg_match('/\Aassets\/diapo-(?:0[1-9]|[1-6][0-9]|7[0-7])\.jpg\z/', $resource)) {
     $allowed[$resource] = 'image/jpeg';
 }
+foreach (['histoire', 'lumiere', 'son', 'storyboard'] as $visualName) {
+    $allowed['assets/visuel-' . $visualName . '.png'] = 'image/png';
+}
 if (!isset($allowed[$resource])) {
     http_response_code(404);
     exit('Page introuvable.');

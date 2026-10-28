@@ -84,3 +84,9 @@ Test local : lancer le serveur PHP avec `php -S 127.0.0.1:8766 cours/conception-
 Modifier `cours/conception-audio-video/slides.json`, puis lancer `python3 scripts/build-course.py`. Les schémas se trouvent dans `scripts/course_visuals.py`. Vérifier avec `python3 tests/course-content.py` et `node --check cours/conception-audio-video/app.js`.
 
 L’audit détaillé est dans `audits/audit-conception-audio-video-2026-10-27.md`. Il distingue les corrections effectuées et les points à confirmer par le formateur. La protection par code existante est conservée.
+
+### Visuels pédagogiques
+
+L’infographie « Avant de filmer » et trois nouvelles planches sur la lumière, le son et le storyboard sont intégrées au parcours. Des exemples photographiques, schémas et cartes illustrées remplacent les blocs de texte sur 35 slides. Les explications restent dépliables ; les planches s’agrandissent dans une fenêtre dédiée. Les PNG sont autorisés explicitement par le contrôleur PHP après connexion.
+
+Les mises en page sont générées par `scripts/course_image_visuals.py`. Les trois illustrations créées par génération d’images sont des exemples pédagogiques, pas des photographies de produits réels. Les briefs sont conservés dans `audits/prompts-visuels-cours.md`.

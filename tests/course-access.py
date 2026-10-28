@@ -35,6 +35,7 @@ assert status == 200 and b'name="code"' in body and b'LE FIL ROUGE' not in body
 assert 'no-store' in headers['Cache-Control']
 csrf = re.search(rb'name="csrf" value="([a-f0-9]+)"', body)[1].decode()
 assert request('assets/diapo-01.jpg', cookie=False)[0] == 403
+assert request('assets/visuel-lumiere.png', cookie=False)[0] == 403
 assert request('index.html', cookie=False)[2].find(b'name="code"') >= 0
 assert request('access-config.php')[0] == 404
 assert request('contenu-source.json')[0] == 404
@@ -48,6 +49,7 @@ assert status == 303 and headers['Location'] == url.path
 assert b'LE FIL ROUGE' in request()[2]
 status, headers, body = request('assets/diapo-01.jpg')
 assert status == 200 and body[:2] == b'\xff\xd8'
+assert request('assets/visuel-lumiere.png')[0] == 200
 assert request('style.css')[0] == 200 and request('app.js')[0] == 200
 assert request('assets/diapo-01.jpg', cookie=False)[0] == 403
 cookies.clear()

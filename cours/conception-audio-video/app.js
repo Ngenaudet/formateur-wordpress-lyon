@@ -1,5 +1,12 @@
 (()=>{
 'use strict';
+const viewer=document.querySelector('#image-viewer');
+const enlarged=document.querySelector('#enlarged-image');
+document.querySelectorAll('[data-zoom-src]').forEach(button=>button.addEventListener('click',()=>{
+ enlarged.src=button.dataset.zoomSrc;enlarged.alt=button.dataset.zoomAlt;viewer.showModal();
+}));
+document.querySelector('#close-image-viewer').addEventListener('click',()=>viewer.close());
+viewer.addEventListener('click',e=>{if(e.target===viewer)viewer.close()});
 const search=document.querySelector('#search');
 const slides=[...document.querySelectorAll('.lesson')];
 const chapters=[...document.querySelectorAll('.chapter:not(#originaux)')];
@@ -33,6 +40,8 @@ function fitSlide(){
  }
 }
 window.addEventListener('resize',fitSlide);
+document.querySelectorAll('.visual-board img,.photo-window img').forEach(img=>img.addEventListener('load',fitSlide));
+document.querySelectorAll('.visual-explanations').forEach(el=>el.addEventListener('toggle',fitSlide));
 function show(index){
  current=Math.max(0,Math.min(slides.length-1,index));
  slides.forEach((slide,i)=>{slide.classList.toggle('current',i===current);if(i!==current)slide.removeAttribute('tabindex')});
@@ -56,6 +65,7 @@ present.addEventListener('click',enter);
 previous.addEventListener('click',()=>show(current-1));next.addEventListener('click',()=>show(current+1));
 document.querySelector('#exit-presentation').addEventListener('click',exit);
 document.addEventListener('keydown',event=>{
+ if(viewer.open)return;
  if(!presenting||event.altKey||event.ctrlKey||event.metaKey)return;
  if(event.key==='Escape'){event.preventDefault();exit()}
  if(['ArrowRight','PageDown'].includes(event.key)){event.preventDefault();show(current+1)}

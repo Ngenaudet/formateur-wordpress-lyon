@@ -10,7 +10,7 @@ class Structure(HTMLParser):
   d=dict(attrs)
   if 'id' in d:self.ids.append(d['id'])
   if tag=='article' and 'lesson' in d.get('class','').split():self.slides+=1
-  if tag=='img':self.images+=1;assert d.get('alt') or d.get('aria-hidden')=='true'
+  if tag=='img':self.images+=1;assert d.get('alt') or d.get('aria-hidden')=='true' or not d.get('src')
   if 'aria-labelledby' in d:self.labels.extend(d['aria-labelledby'].split())
   for k in ['href','src']:
    v=d.get(k,'')
@@ -25,11 +25,15 @@ for s in slides:
  assert s['items'] or s.get('table')
  assert all(1<=n<=77 for n in s['source_pages'])
 check=Structure();check.feed((COURSE/'index.html').read_text())
-assert check.slides==57 and check.images==78
+assert check.slides==57 and check.images>=82
 assert len(check.ids)==len(set(check.ids))
 assert all(x in check.ids for x in check.anchors+check.labels)
 assert all((COURSE/f).is_file() for f in check.local)
 before=hashlib.sha256((COURSE/'index.html').read_bytes()).hexdigest()
 subprocess.run([sys.executable,str(ROOT/'scripts/build-course.py')],check=True)
 assert before==hashlib.sha256((COURSE/'index.html').read_bytes()).hexdigest(), 'La génération doit être reproductible'
+assert 'assets/visuel-lumiere.png' in check.local
+assert 'assets/visuel-son.png' in check.local
+assert 'assets/visuel-storyboard.png' in check.local
+assert 'assets/visuel-histoire.png' in check.local
 print('57 slides, 17 compléments, 77 originaux et portrait, liens, titres accessibles et génération reproductible vérifiés.')

@@ -186,7 +186,8 @@
             8
           ],
           "takeaway": "Chaque étape produit un document ou un fichier vérifiable.",
-          "added": false
+          "added": false,
+          "visual": "skills"
         },
         {
           "title": "Le parcours en 18 heures",
@@ -234,7 +235,8 @@
                 "Dossier et vidéos remis"
               ]
             ]
-          }
+          },
+          "visual": "roadmap"
         },
         {
           "title": "Comment sera évalué le travail ?",
@@ -260,7 +262,8 @@
             74
           ],
           "takeaway": "Le barème du rendu final reste : message 6 points, créativité 8 points, qualité finale 6 points.",
-          "added": false
+          "added": false,
+          "visual": "grading"
         }
       ]
     },
@@ -293,7 +296,8 @@
             16
           ],
           "takeaway": "On choisit un format parce qu’il sert un besoin, pas parce qu’il est à la mode.",
-          "added": false
+          "added": false,
+          "visual": "content"
         },
         {
           "title": "Atelier · Les contenus qui vous marquent",
@@ -342,7 +346,8 @@
             19
           ],
           "takeaway": "Un chiffre ne devient une preuve que si sa source, sa date et son périmètre sont identifiables.",
-          "added": false
+          "added": false,
+          "visual": "impact"
         },
         {
           "title": "Un format, un rôle",
@@ -368,7 +373,8 @@
             35
           ],
           "takeaway": "Les trois vidéos doivent se compléter, plutôt que répéter le même argument.",
-          "added": false
+          "added": false,
+          "visual": "formats-content"
         },
         {
           "title": "Avant la caméra : le brief",
@@ -390,7 +396,8 @@
           "kind": "cours",
           "source_pages": [],
           "takeaway": "Une cible identifiable + un message principal + une action attendue.",
-          "added": true
+          "added": true,
+          "visual": "brief"
         },
         {
           "title": "Analyser une inspiration",
@@ -454,7 +461,8 @@
             72
           ],
           "takeaway": "À remettre : trois vidéos + un dossier qui permet de comprendre leur conception.",
-          "added": false
+          "added": false,
+          "visual": "deliverables"
         },
         {
           "title": "Atelier · Constituer l’équipage",
@@ -528,7 +536,8 @@
             36
           ],
           "takeaway": "Prévoir le son, le temps et les lieux dès le départ évite de découvrir un blocage au tournage.",
-          "added": true
+          "added": true,
+          "visual": "production"
         }
       ]
     },
@@ -561,7 +570,8 @@
             36
           ],
           "takeaway": "Une trame n’est pas encore un script : elle organise les idées principales.",
-          "added": false
+          "added": false,
+          "visual": "skeleton"
         },
         {
           "title": "La présentation produit en cinq étapes",
@@ -594,7 +604,8 @@
           ],
           "takeaway": "Une promesse devient crédible quand la vidéo apporte une preuve adaptée.",
           "added": false,
-          "diagram": "steps"
+          "diagram": "steps",
+          "visual": "steps"
         },
         {
           "title": "90 secondes : une répartition possible",
@@ -637,7 +648,8 @@
                 "Voici ce que je peux faire ensuite"
               ]
             ]
-          }
+          },
+          "visual": "timing"
         },
         {
           "title": "L’histoire en quatre temps",
@@ -667,11 +679,12 @@
           ],
           "takeaway": "Exemple du voyage : préparation → péripéties → rencontre marquante → retour et souvenir.",
           "added": false,
-          "diagram": "arc"
+          "diagram": "arc",
+          "visual": "arc"
         },
         {
           "title": "Chaque plan doit avoir une intention",
-          "lead": "Avant de filmer, choisissez ce que vous voulez montrer et faire ressentir.",
+          "lead": "Avant de filmer, reliez vos choix de plans, d’émotion, de mouvement et de rythme à l’histoire.",
           "items": [
             {
               "title": "VARIER LES ÉCHELLES",
@@ -692,7 +705,8 @@
             28
           ],
           "takeaway": "Ne filmez pas seulement un objet : montrez ce que son usage change pour la personne.",
-          "added": false
+          "added": false,
+          "visual": "reference"
         },
         {
           "title": "Atelier · Présenter les trois trames",
@@ -751,7 +765,8 @@
             40
           ],
           "takeaway": "Si une autre personne ne peut pas tourner la scène à partir du script, il manque une information.",
-          "added": false
+          "added": false,
+          "visual": "script"
         },
         {
           "title": "Écrire pour être entendu",
@@ -801,7 +816,8 @@
             43
           ],
           "takeaway": "Pas besoin de bien dessiner : le storyboard est un outil de compréhension collective.",
-          "added": false
+          "added": false,
+          "visual": "storyboard"
         },
         {
           "title": "Une fiche de scène prête à utiliser",
@@ -930,7 +946,8 @@
           ],
           "takeaway": "L’échelle du plan décrit le cadrage ; le travelling décrit un mouvement de caméra.",
           "added": false,
-          "diagram": "framing"
+          "diagram": "framing",
+          "visual": "framing-photo"
         },
         {
           "title": "Angles, mouvements et composition",
@@ -956,7 +973,8 @@
             57
           ],
           "takeaway": "Un mouvement doit aider à comprendre, révéler ou accompagner quelque chose.",
-          "added": false
+          "added": false,
+          "visual": "movements-photo"
         },
         {
           "title": "Smartphone : préparer avant d’enregistrer",
@@ -981,7 +999,8 @@
             58
           ],
           "takeaway": "Faites un test complet image + son avant de tourner toute la vidéo.",
-          "added": true
+          "added": true,
+          "visual": "smartphone"
         },
         {
           "title": "Lumière : rendre le sujet lisible",
@@ -1005,7 +1024,8 @@
             58
           ],
           "takeaway": "Déplacez le sujet ou la source avant de chercher à corriger l’image au montage.",
-          "added": false
+          "added": false,
+          "visual": "light"
         },
         {
           "title": "Le son se prépare sur le tournage",
@@ -1029,7 +1049,8 @@
             58
           ],
           "takeaway": "Le meilleur outil de correction du son reste une prise propre.",
-          "added": true
+          "added": true,
+          "visual": "sound"
         },
         {
           "title": "Être naturel devant la caméra",
@@ -1108,7 +1129,8 @@
           "source_pages": [],
           "takeaway": "Le spectateur doit pouvoir suivre le message sans lutter pour entendre la voix.",
           "added": true,
-          "diagram": "tracks"
+          "diagram": "tracks",
+          "visual": "tracks"
         },
         {
           "title": "Enregistrer une voix off en quatre étapes",
@@ -1134,7 +1156,8 @@
           "kind": "cours",
           "source_pages": [],
           "takeaway": "La voix off doit compléter l’image ; elle n’a pas besoin de décrire chaque geste visible.",
-          "added": true
+          "added": true,
+          "visual": "voiceover"
         },
         {
           "title": "Choisir une musique utilisable",
@@ -1180,7 +1203,8 @@
           "kind": "cours",
           "source_pages": [],
           "takeaway": "Dans Premiere, attribuez les types Dialogue et Musique avant d’utiliser le ducking.",
-          "added": true
+          "added": true,
+          "visual": "mix"
         }
       ]
     },
@@ -1214,7 +1238,8 @@
             66
           ],
           "takeaway": "Ne décochez pas des options au hasard : comprenez ce que vous importez et où vos fichiers sont stockés.",
-          "added": false
+          "added": false,
+          "visual": "premiere"
         },
         {
           "title": "Des fichiers faciles à retrouver",
@@ -1236,7 +1261,8 @@
           "kind": "cours",
           "source_pages": [],
           "takeaway": "Le fichier de projet ne contient pas nécessairement tous les rushes : gardez les sources avec lui.",
-          "added": true
+          "added": true,
+          "visual": "folders"
         },
         {
           "title": "Monter dans le bon ordre",
@@ -1265,7 +1291,8 @@
             69
           ],
           "takeaway": "Si une intention est trop difficile à réaliser, simplifiez la mise en scène sans perdre le message.",
-          "added": false
+          "added": false,
+          "visual": "edit-workflow"
         },
         {
           "title": "Effets, transitions et couleur",
@@ -1291,7 +1318,8 @@
             69
           ],
           "takeaway": "Pas de surcharge : le spectateur doit suivre le produit et l’histoire.",
-          "added": false
+          "added": false,
+          "visual": "effects"
         },
         {
           "title": "Atelier individuel · La publicité de 15 secondes",
@@ -1373,7 +1401,8 @@
           "source_pages": [],
           "takeaway": "Ces dimensions sont des repères de travail du cours, pas des obligations universelles de toutes les plateformes.",
           "added": true,
-          "diagram": "formats"
+          "diagram": "formats",
+          "visual": "formats"
         },
         {
           "title": "Exporter dans Premiere",
@@ -1395,7 +1424,8 @@
           "kind": "cours",
           "source_pages": [],
           "takeaway": "Un fichier exporté n’est pas validé tant que vous ne l’avez pas regardé du début à la fin.",
-          "added": true
+          "added": true,
+          "visual": "export"
         },
         {
           "title": "Des sous-titres qui aident vraiment",
@@ -1417,7 +1447,8 @@
           "kind": "cours",
           "source_pages": [],
           "takeaway": "Vérifiez contraste, taille et placement sur petit écran. N’utilisez pas uniquement la couleur pour porter une information.",
-          "added": true
+          "added": true,
+          "visual": "captions"
         },
         {
           "title": "Partager sans publier par erreur",
@@ -1439,7 +1470,8 @@
           "kind": "cours",
           "source_pages": [],
           "takeaway": "Non répertorié ne veut pas dire confidentiel. Testez le lien avec le niveau d’accès réellement attendu.",
-          "added": true
+          "added": true,
+          "visual": "sharing"
         },
         {
           "title": "La checklist avant remise",
@@ -1461,7 +1493,8 @@
           "kind": "cours",
           "source_pages": [],
           "takeaway": "Demandez à une personne extérieure au groupe de tester les vidéos et les liens avant la présentation.",
-          "added": true
+          "added": true,
+          "visual": "checklist"
         }
       ]
     },
@@ -1498,7 +1531,8 @@
             52
           ],
           "takeaway": "Le dossier doit permettre de retrouver rapidement les vidéos et les éléments de préparation.",
-          "added": false
+          "added": false,
+          "visual": "dossier"
         },
         {
           "title": "Le barème final sur 20 points",
@@ -1524,7 +1558,8 @@
             74
           ],
           "takeaway": "Une introduction originale et convaincante valorise le message et la créativité ; le total reste sur 20.",
-          "added": false
+          "added": false,
+          "visual": "grading"
         },
         {
           "title": "Présenter, écouter, progresser",
