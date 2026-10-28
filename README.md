@@ -90,3 +90,7 @@ L’audit détaillé est dans `audits/audit-conception-audio-video-2026-10-27.md
 L’infographie « Avant de filmer » et trois nouvelles planches sur la lumière, le son et le storyboard sont intégrées au parcours. Des exemples photographiques, schémas et cartes illustrées remplacent les blocs de texte sur 35 slides. Les explications restent dépliables ; les planches s’agrandissent dans une fenêtre dédiée. Les PNG sont autorisés explicitement par le contrôleur PHP après connexion.
 
 Les mises en page sont générées par `scripts/course_image_visuals.py`. Les trois illustrations créées par génération d’images sont des exemples pédagogiques, pas des photographies de produits réels. Les briefs sont conservés dans `audits/prompts-visuels-cours.md`.
+
+### Une slide par écran
+
+Le cours ouvre directement une seule slide en plein écran (100vh / 100dvh sur mobile), sans afficher la suivante. Les flèches changent de slide ; Sommaire ou Échap revient au parcours. Les liens directs `#slide-N` ouvrent la slide correspondante. Si un contenu dépasse la hauteur disponible, seul son intérieur défile.

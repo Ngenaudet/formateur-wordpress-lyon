@@ -29,15 +29,14 @@ function filter(){
 search.addEventListener('input',filter);
 function clearSearch(){if(search.value){search.value='';filter()}}
 document.querySelector('#print').addEventListener('click',()=>window.print());
-document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',clearSearch));
+document.querySelectorAll('nav a,.primary').forEach(a=>a.addEventListener('click',event=>{
+ clearSearch();
+ const chapter=document.querySelector(a.hash);
+ const first=chapter&&chapter.querySelector('.lesson');
+ if(first){event.preventDefault();enter(slides.indexOf(first))}
+}));
 function fitSlide(){
- if(!presenting)return;
- const active=slides[current];
- active.style.setProperty('--presentation-scale','1');
- if(window.innerWidth>600){
-  const available=window.innerHeight-110;
-  active.style.setProperty('--presentation-scale',String(Math.min(1,available/active.scrollHeight)));
- }
+ if(presenting)slides[current].style.removeProperty('--presentation-scale');
 }
 window.addEventListener('resize',fitSlide);
 document.querySelectorAll('.visual-board img,.photo-window img').forEach(img=>img.addEventListener('load',fitSlide));
@@ -48,20 +47,22 @@ function show(index){
  previous.disabled=current===0;next.disabled=current===slides.length-1;
  document.querySelector('#slide-status').textContent=`${current+1} / ${slides.length}`;
  const active=slides[current];active.setAttribute('tabindex','-1');active.scrollTop=0;active.focus({preventScroll:true});fitSlide();
+ history.replaceState(null,'','#slide-'+(current+1));
 }
-function enter(){
+function enter(index){
  const visible=slides.findIndex(s=>!s.hidden&&s.getBoundingClientRect().bottom>80);
  clearSearch();returnY=window.scrollY;presenting=true;
  document.body.classList.add('presenting');toolbar.hidden=false;
- show(visible<0?0:visible);
+ show(Number.isInteger(index)?index:(visible<0?0:visible));
 }
 function exit(){
  if(!presenting)return;
  presenting=false;document.body.classList.remove('presenting');toolbar.hidden=true;
  slides.forEach(s=>{s.classList.remove('current');s.removeAttribute('tabindex');s.style.removeProperty('--presentation-scale')});
+ history.replaceState(null,'','#accueil');
  window.scrollTo({top:returnY,behavior:'instant'});present.focus({preventScroll:true});
 }
-present.addEventListener('click',enter);
+present.addEventListener('click',()=>enter());
 previous.addEventListener('click',()=>show(current-1));next.addEventListener('click',()=>show(current+1));
 document.querySelector('#exit-presentation').addEventListener('click',exit);
 document.addEventListener('keydown',event=>{
@@ -77,4 +78,16 @@ if('IntersectionObserver'in window){
  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting&&!presenting){document.querySelectorAll('nav a').forEach(a=>{const active=a.hash==='#'+e.target.id;a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')})}})},{rootMargin:'-5% 0px -65% 0px'});
  chapters.forEach(x=>obs.observe(x));
 }
+function openInitialSlide(){
+ const hash=window.location.hash;
+ let initial=0;
+ if(/^#slide-\d+$/.test(hash))initial=Number(hash.slice(7))-1;
+ else if(hash.startsWith('#chapitre-')){
+  const chapter=document.getElementById(hash.slice(1));
+  const first=chapter&&chapter.querySelector('.lesson');
+  if(first)initial=slides.indexOf(first);
+ }
+ enter(initial);
+}
+openInitialSlide();
 })();
