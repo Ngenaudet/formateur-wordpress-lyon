@@ -38,4 +38,10 @@ def render_visual(kind,slide):
   text=item['text'].strip().rstrip('.')
   if len(text)>105:text=text[:102].rsplit(' ',1)[0]+'…'
   cards.append(f'<li><span class="visual-symbol" aria-hidden="true">{icons[kind][i%len(icons[kind])]}</span><strong>{e(item["title"])}</strong><span>{e(text)}</span></li>')
- return '<ol class="visual-flow cards-'+str(len(cards))+'">'+''.join(cards)+'</ol>'
+ result='<ol class="visual-flow cards-'+str(len(cards))+'">'+''.join(cards)+'</ol>'
+ if slide.get('eeat'):
+  result+='<section class="eeat-panel" aria-label="Le cadre E-E-A-T de Google"><h4>GOOGLE · E-E-A-T <span>Des contenus utiles et crédibles</span></h4><div class="eeat-grid">'
+  for pillar in slide['eeat']:
+   result+='<div class="eeat-pillar"><b>'+e(pillar['letter'])+'</b><strong>'+e(pillar['title'])+'</strong><small>'+e(pillar['english'])+'</small><p>'+e(pillar['example'])+'</p></div>'
+  result+='</div><a href="'+e(slide['eeat_source'])+'" target="_blank" rel="noopener noreferrer">Source : Google Search Central ↗</a></section>'
+ return result

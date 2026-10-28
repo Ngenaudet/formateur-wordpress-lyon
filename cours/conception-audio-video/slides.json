@@ -274,7 +274,7 @@
       "slides": [
         {
           "title": "Attirer avec un contenu utile",
-          "lead": "Le content marketing consiste à proposer des contenus qui répondent aux besoins d’une audience.",
+          "lead": "Le content marketing répond aux besoins d’une audience. Avec l’E-E-A-T, Google invite aussi à examiner la crédibilité du contenu.",
           "items": [
             {
               "title": "EXPLIQUER",
@@ -295,9 +295,36 @@
             15,
             16
           ],
-          "takeaway": "On choisit un format parce qu’il sert un besoin, pas parce qu’il est à la mode.",
+          "takeaway": "La confiance est centrale. L’E-E-A-T est un cadre de qualité, pas un score ni un facteur de classement unique.",
           "added": false,
-          "visual": "content"
+          "visual": "content",
+          "eeat": [
+            {
+              "letter": "E",
+              "title": "Expérience",
+              "english": "Experience",
+              "example": "Montrer un usage réellement testé."
+            },
+            {
+              "letter": "E",
+              "title": "Expertise",
+              "english": "Expertise",
+              "example": "Expliquer avec des compétences solides."
+            },
+            {
+              "letter": "A",
+              "title": "Autorité",
+              "english": "Authoritativeness",
+              "example": "Être reconnu sur le sujet par d’autres."
+            },
+            {
+              "letter": "T",
+              "title": "Fiabilité",
+              "english": "Trustworthiness",
+              "example": "Identifier l’auteur, sourcer et être exact."
+            }
+          ],
+          "eeat_source": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content?hl=fr"
         },
         {
           "title": "Atelier · Les contenus qui vous marquent",
@@ -1639,6 +1666,10 @@
     {
       "title": "Définition du plan américain · OQLF",
       "url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8885396/plan-americain"
+    },
+    {
+      "title": "Contenus utiles et E-E-A-T · Google Search Central",
+      "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content?hl=fr"
     }
   ]
 }
