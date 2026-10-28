@@ -21,3 +21,15 @@
  body.presenting .presentation-toolbar{bottom:12px}
 }
 @media print{.slide,body.presenting .slide.current{height:auto;min-height:0}.slide>.slide-layout,body.presenting .slide-layout{overflow:visible}.slide>.slide-footer,body.presenting .slide-footer{padding-bottom:12px;flex:auto}}
+/* Les quatre planches constituent le contenu principal de leur slide. */
+.image-slide .slide-body{padding:8px 24px 20px;display:flex;flex-direction:column;min-height:100%}
+.image-slide .slide-body>header{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.image-slide .slide-body>.ideas{display:none}
+.image-slide .visual-board{margin:0;display:flex;flex-direction:column;flex:1;justify-content:center}
+.image-slide .zoom-image{display:grid;place-items:center;width:100%;background:transparent;border:0;padding:0;cursor:zoom-in}
+.image-slide .visual-board img,body.presenting .image-slide .visual-board img{display:block;width:100%;height:auto;max-height:calc(100dvh - 155px);object-fit:contain;border-radius:8px}
+.image-slide .visual-board figcaption{font-size:10px;line-height:1.4;text-align:center;margin:6px 0;color:var(--muted)}
+.image-slide .takeaway{margin-top:12px;padding:10px 15px}
+body.presenting .image-slide .takeaway{display:none}
+@media(max-width:600px){.image-slide .slide-body{padding:10px 12px}.image-slide .visual-board img,body.presenting .image-slide .visual-board img{max-height:calc(100dvh - 165px)}.image-slide .visual-board figcaption{font-size:9px}}
+@media print{.image-slide .slide-body{min-height:0;padding:0 12px}.image-slide .visual-board img,body.presenting .image-slide .visual-board img{max-height:155mm}.image-slide .takeaway{display:none}}
